@@ -13,7 +13,15 @@ public class SingleSkillSetting : MonoBehaviour {
     public Toggle SkillToggle;
     int SkillLevel = 0;
     public int TopLevel = 6;
-    public int[] LevelPrice = { 11, 4, 5, 6, 7, 8, 0 };
+    public int TopLevel00 = 6;
+    public int TopLevel01;
+    public int TopLevel02;
+    public int TopLevel03;
+    public int TopLevelJordan;
+    public int LevelPrice;// = { 11, 4, 5, 6, 7, 8, 0 };
+    public int Level1Price = 11;
+    public int Level2Price = 3;
+    public int MultiInt = 1;
 
     // Use this for initialization
     void Start () {
@@ -48,25 +56,31 @@ public class SingleSkillSetting : MonoBehaviour {
     public void ClickMinusButton()
     {
         SkillLevel -= 1;
-        GoldObj.GetComponent<GoldScript>().GoldPoint += LevelPrice[SkillLevel];
         UpdatePrice();
+        GoldObj.GetComponent<GoldScript>().GoldPoint += LevelPrice;
     }
 
     public void ClickPlusButton()
     {
+        if (GoldObj.GetComponent<GoldScript>().GoldPoint < LevelPrice)
+            return;
+        GoldObj.GetComponent<GoldScript>().GoldPoint -= LevelPrice;
+        SkillLevel += 1;
         if (!SkillToggle.isOn)
             SkillToggle.isOn = true;
-        if (GoldObj.GetComponent<GoldScript>().GoldPoint < LevelPrice[SkillLevel])
-            return;
-        GoldObj.GetComponent<GoldScript>().GoldPoint -= LevelPrice[SkillLevel];
-        SkillLevel += 1;
         UpdatePrice();
     }
 
     void UpdatePrice()
     {
+        if (SkillLevel == 0)
+            LevelPrice = Level1Price;
+        else if (SkillLevel == TopLevel)
+            LevelPrice = 0;
+        else
+            LevelPrice = SkillLevel * MultiInt + Level2Price;
         LevelText.text = "Lv" + SkillLevel;
-        LevelPriceText.text = "Price:" + LevelPrice[SkillLevel];
+        LevelPriceText.text = "Price:" + LevelPrice;
         SetButtons();
     }
 
