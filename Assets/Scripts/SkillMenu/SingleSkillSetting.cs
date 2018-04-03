@@ -11,7 +11,8 @@ public class SingleSkillSetting : MonoBehaviour {
     public Text LevelText;
     public Text LevelPriceText;
     public Toggle SkillToggle;
-    int SkillLevel = 0;
+    public int SkillLevel = 0;
+    public int BottomLevel = 0;
     public int TopLevel = 6;
     public int TopLevel00 = 6;
     public int TopLevel01;
@@ -92,7 +93,7 @@ public class SingleSkillSetting : MonoBehaviour {
 
     void SetMinusButton()
     {
-        if (SkillLevel < 1)
+        if (SkillLevel < 1 + BottomLevel)
         {
             MinusButton.SetActive(false);
             if (SkillToggle.isOn)
