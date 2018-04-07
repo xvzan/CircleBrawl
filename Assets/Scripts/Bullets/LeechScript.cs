@@ -13,7 +13,7 @@ public class LeechScript : Photon.MonoBehaviour
     private bool selfprotect;
     public float turntime;
     public float speed;
-    bool unturned;
+    bool unturned = true;
 
     // Use this for initialization
     void Start()
@@ -30,8 +30,9 @@ public class LeechScript : Photon.MonoBehaviour
         pasttime += Time.fixedDeltaTime;
         if (unturned && pasttime >= turntime)
         {
+            unturned = false;
             Vector2 nextvec2 = FindClosestVector2n() * speed;
-            photonView.RPC("SelfTurn", PhotonTargets.All, nextvec2);
+            SelfTurn(nextvec2);
         }
         if (pasttime >= maxtime)
         {
@@ -87,7 +88,7 @@ public class LeechScript : Photon.MonoBehaviour
         GameObject[] Allthem = GameObject.FindGameObjectsWithTag("Player");
         float sqrdis = Mathf.Infinity;
         Vector3 position = transform.position;
-        Vector2 vector = Vector2.zero;
+        Vector2 vector = gameObject.GetComponent<Rigidbody2D>().velocity;
         foreach (GameObject Him in Allthem)
         {
             if (Him == sender) continue;//跳过施法者

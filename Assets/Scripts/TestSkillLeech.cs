@@ -46,8 +46,8 @@ public class TestSkillLeech : Photon.MonoBehaviour
         leecher.GetComponent<LeechScript>().sender = gameObject;
         leecher.GetComponent<LeechScript>().turntime = turntime;
         leecher.GetComponent<LeechScript>().speed = bulletspeed;
+        leecher.GetComponent<LeechScript>().leechdamage = damage;
         bullet = PhotonNetwork.Instantiate(leecher.name, singplace + 0.71f * skilldirection.normalized, Quaternion.identity, 0);
-        bullet.GetComponent<LeechScript>().leechdamage = damage;
         bullet.GetComponent<Rigidbody2D>().velocity = skilldirection.normalized * bulletspeed;
         //bullet.GetComponent<LeechScript>().maxtime = maxdistance / bulletspeed;
         currentcooldown = 0;
