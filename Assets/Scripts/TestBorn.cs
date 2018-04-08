@@ -10,11 +10,14 @@ public class TestBorn : Photon.MonoBehaviour
     float diameter;
     float speed = 1f;
     GameObject safeground;
+    public GameObject MyUI;
 
 	// Use this for initialization
 	void Start ()
     {
         GameObject localPlayer = PhotonNetwork.Instantiate("PlayerCircle", Random.insideUnitCircle * 7, Quaternion.identity, 0);
+        MyUI.GetComponent<SkillsLink>().mySoldier = localPlayer;
+        MyUI.GetComponent<SkillsLink>().linktome();
         localPlayer.GetComponent<DoSkill>().enabled = true;
         localPlayer.GetComponent<MoveScript>().enabled = true;
         //localPlayer.GetComponent<LeftButtonSkill>().enabled = true;

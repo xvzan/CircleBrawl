@@ -19,8 +19,17 @@ public class TestSkillLeech : Photon.MonoBehaviour
     {
         currentcooldown = cooldowntime;
     }
-
+    
     // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire4") && skillavaliable)
+        {
+            DoSkill.singing = 0;
+            gameObject.GetComponent<DoSkill>().Fire = Skill;
+        }
+    }
+
     private void FixedUpdate()
     {
         if (skillavaliable)

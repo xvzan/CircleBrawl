@@ -26385,6 +26385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db93805c4f7e44d4b86351f8ced7c710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyUI: {fileID: 1481734802}
 --- !u!4 &1364310738
 Transform:
   m_ObjectHideFlags: 0
@@ -28290,6 +28291,7 @@ GameObject:
   - component: {fileID: 1481734804}
   - component: {fileID: 1481734803}
   - component: {fileID: 1481734807}
+  - component: {fileID: 1481734808}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -28385,6 +28387,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkillMenu: {fileID: 1132707016}
+--- !u!114 &1481734808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fe3663a4d95714cb062fbb0f1a45b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySoldier: {fileID: 0}
 --- !u!1 &1485858707
 GameObject:
   m_ObjectHideFlags: 0

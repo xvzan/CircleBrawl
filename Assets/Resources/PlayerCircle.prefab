@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 114285432174419920}
   - component: {fileID: 114312116052051252}
   - component: {fileID: 120936783767746970}
+  - component: {fileID: 114482920916306366}
   m_Layer: 0
   m_Name: PlayerCircle
   m_TagString: Player
@@ -194,7 +195,7 @@ MonoBehaviour:
   fireball: {fileID: 1197206318659480, guid: 12e895a9027336d4aadf9e33e68f976a, type: 2}
   force: 1500
   damage: 10
-  cooldowntime: 30
+  cooldowntime: 3
   skillavaliable: 0
 --- !u!114 &114285432174419920
 MonoBehaviour:
@@ -288,6 +289,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114482920916306366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32552fba69666c4e916642d3cfa1020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyUI: {fileID: 0}
 --- !u!114 &114540715471846792
 MonoBehaviour:
   m_ObjectHideFlags: 1

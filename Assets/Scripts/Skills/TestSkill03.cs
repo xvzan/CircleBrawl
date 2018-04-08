@@ -16,6 +16,14 @@ public class TestSkill03 : Photon.MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Fire3") && gameObject.GetComponent<SelfExplodeScript>().skillavaliable)
+        {
+            gameObject.GetComponent<TestSkill03>().Skill();
+        }
+    }
+
     private void FixedUpdate()
     {
         if (DoSkill.singing == 3)
