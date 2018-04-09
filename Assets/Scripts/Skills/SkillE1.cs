@@ -20,8 +20,8 @@ public class SkillE1 : Photon.MonoBehaviour
         currentcooldown = cooldowntime;
     }
 	
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update ()
     {
         if (Input.GetButtonDown("FireQ") && skillavaliable)
         {
