@@ -29,7 +29,7 @@ public class TestSkillLightning : Photon.MonoBehaviour
     public void Skill(Vector2 actionplace)
     {
         Vector2 realplace;
-        DoSkill.singing = 0; //停止吟唱中技能
+        //DoSkill.singing = 0; //停止吟唱中技能
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
         gameObject.GetComponent<DoSkill>().Fire = null;
         Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();

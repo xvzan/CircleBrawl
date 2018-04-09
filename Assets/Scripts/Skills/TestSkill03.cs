@@ -20,25 +20,26 @@ public class TestSkill03 : Photon.MonoBehaviour
     {
         if (Input.GetButtonDown("Fire3") && gameObject.GetComponent<SelfExplodeScript>().skillavaliable)
         {
-            gameObject.GetComponent<TestSkill03>().Skill();
+            Skill();
         }
     }
 
     private void FixedUpdate()
     {
-        if (DoSkill.singing == 3)
+        if (DoSkill.singing != 3)
         {
-            timesinged += Time.fixedDeltaTime;
+            timesinged = 0;
+            return;
         }
         else
         {
-            timesinged = 0;
-        }
-        if (timesinged >= timetosing)
-        {
-            gameObject.GetComponent<SelfExplodeScript>().Skill();
-            timesinged = 0;
-            DoSkill.singing = 0;
+            timesinged += Time.fixedDeltaTime;
+            if (timesinged >= timetosing)
+            {
+                gameObject.GetComponent<SelfExplodeScript>().Skill();
+                timesinged = 0;
+                DoSkill.singing = 0;
+            }
         }
     }
 

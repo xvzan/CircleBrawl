@@ -28,10 +28,9 @@ public class TestSkill02 : Photon.MonoBehaviour
 
     public void Skill(Vector2 actionplace)
     {
-        DoSkill.singing = 0; //停止吟唱中技能
-        Vector2 skilldirection;
+        //DoSkill.singing = 0; //停止吟唱中技能
         Vector2 singplace = transform.position;
-        skilldirection = actionplace - singplace;
+        Vector2 skilldirection = actionplace - singplace;
         float realdistance = Mathf.Min(skilldirection.magnitude, maxdistance);
         if (realdistance <= 0.6)
         {
@@ -39,7 +38,7 @@ public class TestSkill02 : Photon.MonoBehaviour
         }   //半径小于自身半径时不施法
         else
         {
-            gameObject.GetComponent<DoSkill>().Fire = null;
+            //gameObject.GetComponent<DoSkill>().Fire = null;
             Vector2 realplace = singplace + skilldirection.normalized * realdistance;
             Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
             gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动

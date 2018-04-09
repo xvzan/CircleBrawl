@@ -9,7 +9,7 @@ public class TestSkill01 : Photon.MonoBehaviour
     public float maxdistance;
     public float bulletspeed = 5;
     public GameObject fireball;
-    public float force = 1500;
+    public float force = 15;
     public float damage = 10;
     private float currentcooldown;
     public float cooldowntime = 3;
@@ -45,12 +45,11 @@ public class TestSkill01 : Photon.MonoBehaviour
 
     public void Skill(Vector2 actionplace)
     {
-        DoSkill.singing = 0;
-        gameObject.GetComponent<DoSkill>().Fire = null;
+        //DoSkill.singing = 0;
+        //gameObject.GetComponent<DoSkill>().Fire = null;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        Vector2 skilldirection;
         Vector2 singplace = transform.position;
-        skilldirection = actionplace - singplace;
+        Vector2 skilldirection = actionplace - singplace;
         DoFire (singplace + 0.71f * skilldirection.normalized, skilldirection.normalized * bulletspeed);
         currentcooldown = 0;
         skillavaliable = false;
@@ -62,7 +61,7 @@ public class TestSkill01 : Photon.MonoBehaviour
         GameObject bullet;
         fireball.GetComponent<BombExplode>().sender = gameObject;
         bullet = PhotonNetwork.Instantiate(fireball.name, fireplace, Quaternion.identity, 0);
-        bullet.GetComponent<BombExplode>().bombpower = force;
+        //bullet.GetComponent<BombExplode>().bombpower = force;
         bullet.GetComponent<BombExplode>().bombdamage = damage;
         bullet.GetComponent<Rigidbody2D>().velocity = speed2d;
         //bullet.GetComponent<BombExplode>().maxtime = maxdistance / bulletspeed;

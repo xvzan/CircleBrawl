@@ -7,7 +7,7 @@ public class BombExplode : Photon.MonoBehaviour
 {
     private float pasttime;
     public float maxtime;
-    public float bombpower = 1500;
+    //public float bombpower = 15;
     public float bombdamage;
     public GameObject sender;
     private bool selfprotect;

@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 114312116052051252}
   - component: {fileID: 120936783767746970}
   - component: {fileID: 114482920916306366}
+  - component: {fileID: 114281299735048176}
   m_Layer: 0
   m_Name: PlayerCircle
   m_TagString: Player
@@ -197,6 +198,23 @@ MonoBehaviour:
   damage: 10
   cooldowntime: 3
   skillavaliable: 0
+--- !u!114 &114281299735048176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d104ec09daaecba4b883605aaac2cb51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheRock: {fileID: 1226264735029378, guid: 49d3fa88c96ba09488526e24f62c6ca3, type: 2}
+  maxdistance: 5
+  damage: 10
+  bombforce: 18
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114285432174419920
 MonoBehaviour:
   m_ObjectHideFlags: 1
