@@ -58,4 +58,9 @@ public class RBScript : Photon.MonoBehaviour
         else
             timepassed += Time.fixedDeltaTime;
     }
+
+    public float GetRemainTime()
+    {
+        return timetostop - timepassed;
+    }
 }

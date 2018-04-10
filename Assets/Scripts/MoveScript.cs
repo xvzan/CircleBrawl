@@ -43,7 +43,7 @@ public class MoveScript : Photon.MonoBehaviour {
         {
             movetarget = targeticon.transform.position;
             movedirection = movetarget - PlayerRb2d.position;
-            if (movedirection.sqrMagnitude < 0.2)
+            if (movedirection.sqrMagnitude < 0.1)
             {
                 GameObject.Destroy(targeticon);
             }

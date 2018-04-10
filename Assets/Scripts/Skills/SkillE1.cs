@@ -23,7 +23,7 @@ public class SkillE1 : Photon.MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (Input.GetButtonDown("FireQ") && skillavaliable)
+        if (Input.GetButtonDown("FireE") && skillavaliable)
         {
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;
@@ -51,5 +51,7 @@ public class SkillE1 : Photon.MonoBehaviour
         GameObject MyRock = PhotonNetwork.Instantiate(TheRock.name, actionplace, Quaternion.identity, 0);
         MyRock.GetComponent<RockExplode>().damage = damage;
         MyRock.GetComponent<RockExplode>().bombforce = bombforce;
+        currentcooldown = 0;
+        skillavaliable = false;
     }
 }

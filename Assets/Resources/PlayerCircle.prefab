@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 120936783767746970}
   - component: {fileID: 114482920916306366}
   - component: {fileID: 114281299735048176}
+  - component: {fileID: 114719163519757270}
   m_Layer: 0
   m_Name: PlayerCircle
   m_TagString: Player
@@ -409,6 +410,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f54c09aa10f3a4f9d6d449e4558f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114719163519757270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2414e2d9d5bbd884db0d139aea0e389a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShadowCircle: {fileID: 1385352283329590, guid: 61523dfce7a1d1f41b9ff979b2a36971,
+    type: 2}
+  cooldowntime: 3
+  maxshadowtime: 2.5
+  skillavaliable: 1
 --- !u!114 &114842419683896440
 MonoBehaviour:
   m_ObjectHideFlags: 1
