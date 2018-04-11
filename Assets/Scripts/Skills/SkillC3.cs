@@ -20,6 +20,8 @@ public class SkillC3 : Photon.MonoBehaviour
     // Use this for initialization
     void Start ()
     {
+        if (!photonView.isMine)
+            enabled = false;
         currentcooldown = cooldowntime;
         //ShadowCircle.GetComponent<CircleCollider2D>().enabled = false;
         //ShadowCircle.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 127);
@@ -28,7 +30,7 @@ public class SkillC3 : Photon.MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("FireQ"))
+        if (Input.GetButtonDown("FireC"))
         {
             if (HaveShadow)
             {

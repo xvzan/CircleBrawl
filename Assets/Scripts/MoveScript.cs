@@ -79,6 +79,7 @@ public class MoveScript : Photon.MonoBehaviour {
         {
             PlayerRb2d.velocity = Givenvelocity;
         }
+        VelotoAdd = Vector2.zero;
     }
     private void LateUpdate()
     {

@@ -5,11 +5,11 @@ using Photon;
 
 public class ShowHP : Photon.MonoBehaviour
 {
-    Component bar;
+    public Component bar;
 
 	// Use this for initialization
 	void Start () {
-        bar = gameObject.transform.Find("healthtop");
+        //bar = gameObject.transform.Find("healthtop");
 	}
 	
 	// Update is called once per frame
