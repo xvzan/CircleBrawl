@@ -46,14 +46,15 @@ public class SkillC3 : Photon.MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (skillavaliable)
-            return;
-        currentcooldown += Time.fixedDeltaTime;
-        if (HaveShadow && currentcooldown >= maxshadowtime)
-            BackToShadow();
-        if (currentcooldown >= cooldowntime)
+        if (!skillavaliable)
         {
-            skillavaliable = true;
+            currentcooldown += Time.fixedDeltaTime;
+            if (HaveShadow && currentcooldown >= maxshadowtime)
+                BackToShadow();
+            if (currentcooldown >= cooldowntime)
+            {
+                skillavaliable = true;
+            }
         }
     }
 

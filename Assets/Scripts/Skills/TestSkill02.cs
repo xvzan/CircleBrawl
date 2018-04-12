@@ -11,7 +11,10 @@ public class TestSkill02 : Photon.MonoBehaviour
     MoveScript MS;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        if (!photonView.isMine)
+            enabled = false;
         skillavaliable = true;
         MS = GetComponent<MoveScript>();
     }
