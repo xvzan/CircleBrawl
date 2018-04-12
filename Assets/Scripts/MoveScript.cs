@@ -79,7 +79,7 @@ public class MoveScript : Photon.MonoBehaviour {
         {
             PlayerRb2d.velocity = Givenvelocity;
         }
-        VelotoAdd = Vector2.zero;
+        //VelotoAdd = Vector2.zero;
     }
     private void LateUpdate()
     {
@@ -94,7 +94,7 @@ public class MoveScript : Photon.MonoBehaviour {
     {
         GameObject.Destroy(targeticon);
     }
-
+    
     /*
     public Vector2 AddConstentCentrallyVelocity(Vector2 point, float speed, Vector2 orivelo)
     {

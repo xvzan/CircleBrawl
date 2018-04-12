@@ -33,15 +33,19 @@ public class DoSkill : Photon.MonoBehaviour
     public void justdoit()
     {
         //photonView.RPC("realdoit", PhotonTargets.All);
+        if (!photonView.isMine)
+            return;
         Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         FireReset();
     }
 
+    /*
     [PunRPC]
     public void realdoit()
     {
         Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
+    */
 
     public void FireReset()
     {

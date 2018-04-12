@@ -6,28 +6,33 @@ using Photon;
 public class SkillY1 : Photon.MonoBehaviour
 {
     public GameObject MyLineObj;
+    public GameObject MyLine;
     BlueLineScript MylineScript;
     public float maxdistance = 10;
     public bool skillavaliable;
-    public Rigidbody2D center;
-    public float speed = 3;
-    public float damage = 5;
-    public float maxtime = 2;
+    public float speed;
+    public float damage;
+    public float maxtime;
 
     // Use this for initialization
     void Start ()
     {
+        if (!photonView.isMine)
+            enabled = false;
         skillavaliable = true;
         //MylineScript = MyLineObj.GetComponent<BlueLineScript>();
-        //MylineScript.sender = gameObject.GetComponent<Rigidbody2D>();
+        MyLineObj.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update ()
     {
         if (Input.GetButtonDown("FireQ") && skillavaliable)
         {
             DoSkill.singing = 0;
+            if (MyLine != null)
+                MyLine.GetComponent<BlueLineScript>().Destroyself();
+            MyLine = PhotonNetwork.Instantiate(MyLineObj.name, gameObject.transform.position, Quaternion.identity, 0);
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
     }
@@ -60,18 +65,23 @@ public class SkillY1 : Photon.MonoBehaviour
                 MylineScript.maxtime = maxtime;
                 MylineScript.damage = damage;
                 */
-                GameObject LineHit = PhotonNetwork.Instantiate(MyLineObj.name, gameObject.transform.position, Quaternion.identity, 0);
-                LineHit.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
-                LineHit.GetComponent<BlueLineScript>().maxtime = maxtime;
-                LineHit.GetComponent<BlueLineScript>().damage = damage;
-                LineHit.GetComponent<BlueLineScript>().receiver = hit.gameObject;
-                LineHit.GetComponent<BlueLineScript>().IHit(hit.gameObject);
+                MyLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
+                MyLine.GetComponent<BlueLineScript>().maxtime = maxtime;
+                MyLine.GetComponent<BlueLineScript>().damage = damage;
+                MyLine.GetComponent<BlueLineScript>().speed = speed;
+                MyLine.GetComponent<BlueLineScript>().receiver = hit.GetComponent<Rigidbody2D>();
+                //MyLine.GetComponent<BlueLineScript>().SetVictim(hit.GetComponent<Rigidbody2D>());
+                MyLine.GetComponent<BlueLineScript>().missed = false;
+                //MyLine.GetComponent<BlueLineScript>().alldrag();
+                //MyLine.GetComponent<BlueLineScript>().IHit();
+                MyLine.GetComponent<BlueLineScript>().EnableSelf();
                 return;
             }
         }
-        GameObject MissedLine = PhotonNetwork.Instantiate(MyLineObj.name, gameObject.transform.position, Quaternion.identity, 0);
-        MissedLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
-        MissedLine.GetComponent<BlueLineScript>().IMissed(realplace);
+        MyLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
+        MyLine.GetComponent<BlueLineScript>().receiver = null;
+        MyLine.GetComponent<BlueLineScript>().IMissed(realplace);
+        MyLine.GetComponent<BlueLineScript>().EnableSelf();
     }
 
     IEnumerator Skillcooldown()

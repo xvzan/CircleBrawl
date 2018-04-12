@@ -6,33 +6,38 @@ using Photon;
 public class BlueLineScript : Photon.MonoBehaviour
 {
     public Rigidbody2D sender;
-    public GameObject receiver;
+    public Rigidbody2D receiver;
     public LineRenderer MyLine;
-    public float speed;
+    public float speed = 2;
     public float damage;
     public float maxtime = 2;
     float timepsd = 0;
-    public bool missed = false;
+    public bool missed;
+    public bool Idrag = true;
 
 	// Use this for initialization
 	void Start () {
         timepsd = 0;
+        Idrag = true;
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (!missed)
             Paint();
+        if (timepsd >= maxtime || receiver == null || sender == null)
+            Destroyself();
+        if (Idrag && receiver != null)
+            IHit();
     }
 
     void FixedUpdate()
     {
-        if (missed)
-            return;
-        timepsd += Time.fixedDeltaTime;
-        if (timepsd >= maxtime || receiver == null || sender == null)
-            Destroyself();
-        receiver.GetComponent<HPScript>().GetHurt(damage * Time.fixedDeltaTime);
+        if (!missed)
+        {
+            timepsd += Time.fixedDeltaTime;
+            receiver.GetComponent<HPScript>().GetHurt(damage * Time.fixedDeltaTime);
+        }
     }
 
     public void AddConstentCentrallyVelocity(Rigidbody2D victim, MoveScript worker)
@@ -46,19 +51,32 @@ public class BlueLineScript : Photon.MonoBehaviour
         //photonView.RPC("drawmyline", PhotonTargets.All, Vector3.zero, Vector3.zero);
         if (receiver != null)
             photonView.RPC("YouCanGo", PhotonTargets.All);
+        //receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
     }
 
-    public void IHit(GameObject target)
+    public void IHit()
     {
-        missed = false;
-        photonView.RPC("HitYou", PhotonTargets.All);
+        //photonView.RPC("HitYou", PhotonTargets.All);
+        receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
+        Idrag = false;
     }
 
+    /*
     [PunRPC]
-    public void HitYou()
+    void HitYou()
     {
         receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
     }
+    public void SetVictim(Rigidbody2D victim)
+    {
+        photonView.RPC("VictimSet", PhotonTargets.All, victim);
+    }
+    [PunRPC]
+    public void VictimSet(Rigidbody2D victim)
+    {
+        receiver = victim;
+    }
+    */
 
     [PunRPC]
     public void YouCanGo()
@@ -79,7 +97,16 @@ public class BlueLineScript : Photon.MonoBehaviour
     {
         //MyLine.SetPosition(0, sender.position);
         //MyLine.SetPosition(1, receiver.GetComponent<Rigidbody2D>().position);
-        photonView.RPC("drawmyline", PhotonTargets.All, sender.position, receiver.GetComponent<Rigidbody2D>().position);
+        //photonView.RPC("drawmyline", PhotonTargets.All, sender.position, receiver.position);
+        photonView.RPC("catchyou", PhotonTargets.All, receiver.position);
+        drawmyline(sender.position, receiver.position);
+    }
+    
+    [PunRPC]
+    void catchyou(Vector2 catchplace)
+    {
+        if (receiver == null)
+            receiver = Physics2D.OverlapPoint(catchplace).GetComponent<Rigidbody2D>();
     }
 
     [PunRPC]
@@ -95,7 +122,7 @@ public class BlueLineScript : Photon.MonoBehaviour
         Destroyself();
     }
 
-    void Destroyself()
+    public void Destroyself()
     {
         photonView.RPC("SDestroy", PhotonTargets.All);
     }
@@ -104,5 +131,28 @@ public class BlueLineScript : Photon.MonoBehaviour
     void SDestroy()
     {
         GameObject.Destroy(this.gameObject);
+    }
+    
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(speed);
+        }
+        else
+        {
+            speed = (float)stream.ReceiveNext();
+        }
+    }
+
+    public void EnableSelf()
+    {
+        photonView.RPC("doenable", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    void doenable()
+    {
+        gameObject.GetComponent<BlueLineScript>().enabled = true;
     }
 }

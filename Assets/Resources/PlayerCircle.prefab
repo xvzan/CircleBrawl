@@ -169,13 +169,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyLineObj: {fileID: 1056130122229082, guid: e5087dcb1240e2744bd1a07675e13a4b, type: 2}
+  MyLine: {fileID: 0}
   maxdistance: 10
-  skillavaliable: 0
-  center: {fileID: 50066458329441964}
+  skillavaliable: 1
   speed: 3
   damage: 5
-  maxtime: 2
-  ttt: {fileID: 0}
+  maxtime: 10
 --- !u!114 &114195414578748798
 MonoBehaviour:
   m_ObjectHideFlags: 1

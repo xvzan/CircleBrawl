@@ -80,4 +80,15 @@ public class HPScript : Photon.MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(force);
     }
 
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.isWriting)
+        {
+            stream.SendNext(currentHP);
+        }
+        else
+        {
+            currentHP = (float)stream.ReceiveNext();
+        }
+    }
 }

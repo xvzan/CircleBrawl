@@ -11,7 +11,7 @@ public class CentrallyConstentField : Photon.MonoBehaviour
     public void AddConstentCentrallyVelocity(Rigidbody2D victim,MoveScript worker)
     {
         Vector2 vector = center.position - victim.position;
-        if (vector.magnitude < 0.1)
+        if (vector.sqrMagnitude < 0.01)
             return;
         worker.VelotoAdd += (center.position - victim.position).normalized * speed;
     }

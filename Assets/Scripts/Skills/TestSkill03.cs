@@ -12,6 +12,8 @@ public class TestSkill03 : Photon.MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (!photonView.isMine)
+            enabled = false;
         timesinged = 0;
     }
 
