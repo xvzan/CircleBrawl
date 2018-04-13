@@ -173,8 +173,8 @@ MonoBehaviour:
   maxdistance: 10
   skillavaliable: 1
   speed: 3
-  damage: 5
-  maxtime: 10
+  damage: 2
+  maxtime: 3
 --- !u!114 &114195414578748798
 MonoBehaviour:
   m_ObjectHideFlags: 1
