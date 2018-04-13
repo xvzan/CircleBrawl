@@ -7,7 +7,7 @@ public class SkillY1 : Photon.MonoBehaviour
 {
     public GameObject MyLineObj;
     public GameObject MyLine;
-    BlueLineScript MylineScript;
+    //BlueLineScript MylineScript;
     public float maxdistance = 10;
     public bool skillavaliable;
     public float speed;
@@ -31,7 +31,7 @@ public class SkillY1 : Photon.MonoBehaviour
         {
             DoSkill.singing = 0;
             if (MyLine != null)
-                MyLine.GetComponent<BlueLineScript>().Destroyself();
+                MyLine.GetComponent<DestroyScript>().Destroyself();
             MyLine = PhotonNetwork.Instantiate(MyLineObj.name, gameObject.transform.position, Quaternion.identity, 0);
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
@@ -70,10 +70,7 @@ public class SkillY1 : Photon.MonoBehaviour
                 MyLine.GetComponent<BlueLineScript>().damage = damage;
                 MyLine.GetComponent<BlueLineScript>().speed = speed;
                 MyLine.GetComponent<BlueLineScript>().receiver = hit.GetComponent<Rigidbody2D>();
-                //MyLine.GetComponent<BlueLineScript>().SetVictim(hit.GetComponent<Rigidbody2D>());
                 MyLine.GetComponent<BlueLineScript>().missed = false;
-                //MyLine.GetComponent<BlueLineScript>().alldrag();
-                //MyLine.GetComponent<BlueLineScript>().IHit();
                 MyLine.GetComponent<BlueLineScript>().EnableSelf();
                 return;
             }

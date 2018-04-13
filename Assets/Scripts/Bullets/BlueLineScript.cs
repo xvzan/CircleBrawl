@@ -26,7 +26,7 @@ public class BlueLineScript : Photon.MonoBehaviour
         if (!missed)
             Paint();
         if (timepsd >= maxtime || receiver == null || sender == null)
-            Destroyself();
+            gameObject.GetComponent<DestroyScript>().Destroyself();
         if (Idrag && receiver != null)
             IHit();
     }
@@ -42,62 +42,30 @@ public class BlueLineScript : Photon.MonoBehaviour
 
     public void AddConstentCentrallyVelocity(Rigidbody2D victim, MoveScript worker)
     {
-        //Vector2 vector = sender.position - victim.position;
         worker.VelotoAdd += (sender.position - victim.position).normalized * speed;
     }
 
     void OnDestroy()
     {
-        //photonView.RPC("drawmyline", PhotonTargets.All, Vector3.zero, Vector3.zero);
         if (receiver != null)
-            photonView.RPC("YouCanGo", PhotonTargets.All);
-        //receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
+            receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
     }
 
     public void IHit()
     {
-        //photonView.RPC("HitYou", PhotonTargets.All);
         receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
         Idrag = false;
-    }
-
-    /*
-    [PunRPC]
-    void HitYou()
-    {
-        receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
-    }
-    public void SetVictim(Rigidbody2D victim)
-    {
-        photonView.RPC("VictimSet", PhotonTargets.All, victim);
-    }
-    [PunRPC]
-    public void VictimSet(Rigidbody2D victim)
-    {
-        receiver = victim;
-    }
-    */
-
-    [PunRPC]
-    public void YouCanGo()
-    {
-        receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
     }
 
     public void IMissed(Vector2 v2)
     {
         missed = true;
-        //MyLine.SetPosition(0, gameObject.transform.position);
-        //MyLine.SetPosition(1, v2);
         photonView.RPC("drawmyline", PhotonTargets.All, sender.position, v2);
         StartCoroutine(EraseLine());
     }
 
     void Paint()
     {
-        //MyLine.SetPosition(0, sender.position);
-        //MyLine.SetPosition(1, receiver.GetComponent<Rigidbody2D>().position);
-        //photonView.RPC("drawmyline", PhotonTargets.All, sender.position, receiver.position);
         photonView.RPC("catchyou", PhotonTargets.All, receiver.position);
         drawmyline(sender.position, receiver.position);
     }
@@ -119,18 +87,7 @@ public class BlueLineScript : Photon.MonoBehaviour
     IEnumerator EraseLine()
     {
         yield return new WaitForSeconds(0.1f);
-        Destroyself();
-    }
-
-    public void Destroyself()
-    {
-        photonView.RPC("SDestroy", PhotonTargets.All);
-    }
-
-    [PunRPC]
-    void SDestroy()
-    {
-        GameObject.Destroy(this.gameObject);
+        gameObject.GetComponent<DestroyScript>().Destroyself();
     }
     
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
@@ -138,21 +95,22 @@ public class BlueLineScript : Photon.MonoBehaviour
         if (stream.isWriting)
         {
             stream.SendNext(speed);
+            stream.SendNext(enabled);
         }
         else
         {
             speed = (float)stream.ReceiveNext();
+            enabled = (bool)stream.ReceiveNext();
         }
     }
 
     public void EnableSelf()
     {
-        photonView.RPC("doenable", PhotonTargets.All);
+        photonView.RPC("SelfEnableBlue", PhotonTargets.All);
     }
-
     [PunRPC]
-    void doenable()
+    void SelfEnableBlue()
     {
-        gameObject.GetComponent<BlueLineScript>().enabled = true;
+        enabled = true;
     }
 }
