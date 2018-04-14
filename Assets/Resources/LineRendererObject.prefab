@@ -93,11 +93,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sender: {fileID: 0}
   receiver: {fileID: 0}
+  receiverID: 0
   MyLine: {fileID: 120581128379678434}
   speed: 3
   damage: 2
   maxtime: 3
-  missed: 0
+  missed: 1
   Idrag: 1
 --- !u!120 &120581128379678434
 LineRenderer:

@@ -69,14 +69,13 @@ public class SkillY1 : Photon.MonoBehaviour
                 MyLine.GetComponent<BlueLineScript>().maxtime = maxtime;
                 MyLine.GetComponent<BlueLineScript>().damage = damage;
                 MyLine.GetComponent<BlueLineScript>().speed = speed;
-                MyLine.GetComponent<BlueLineScript>().receiver = hit.GetComponent<Rigidbody2D>();
-                MyLine.GetComponent<BlueLineScript>().missed = false;
+                MyLine.GetComponent<BlueLineScript>().receiverID = hit.gameObject.GetPhotonView().photonView.viewID;
                 MyLine.GetComponent<BlueLineScript>().EnableSelf();
                 return;
             }
         }
         MyLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
-        MyLine.GetComponent<BlueLineScript>().receiver = null;
+        MyLine.GetComponent<BlueLineScript>().receiverID = 0;
         MyLine.GetComponent<BlueLineScript>().IMissed(realplace);
         MyLine.GetComponent<BlueLineScript>().EnableSelf();
     }

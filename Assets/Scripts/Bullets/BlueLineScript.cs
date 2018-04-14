@@ -7,6 +7,7 @@ public class BlueLineScript : Photon.MonoBehaviour
 {
     public Rigidbody2D sender;
     public Rigidbody2D receiver;
+    public int receiverID;
     public LineRenderer MyLine;
     public float speed = 2;
     public float damage;
@@ -66,15 +67,14 @@ public class BlueLineScript : Photon.MonoBehaviour
 
     void Paint()
     {
-        photonView.RPC("catchyou", PhotonTargets.All, receiver.position);
         drawmyline(sender.position, receiver.position);
     }
     
     [PunRPC]
-    void catchyou(Vector2 catchplace)
+    void catchyou(int catchID)
     {
-        if (receiver == null)
-            receiver = Physics2D.OverlapPoint(catchplace).GetComponent<Rigidbody2D>();
+        missed = false;
+        receiver = PhotonView.Find(catchID).GetComponent<Rigidbody2D>();
     }
 
     [PunRPC]
@@ -104,6 +104,8 @@ public class BlueLineScript : Photon.MonoBehaviour
 
     public void EnableSelf()
     {
+        if (receiverID != 0)
+            photonView.RPC("catchyou", PhotonTargets.All, receiverID);
         photonView.RPC("SelfEnableBlue", PhotonTargets.All);
     }
     [PunRPC]
