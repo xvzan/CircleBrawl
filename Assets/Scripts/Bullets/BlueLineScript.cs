@@ -90,19 +90,17 @@ public class BlueLineScript : Photon.MonoBehaviour
         gameObject.GetComponent<DestroyScript>().Destroyself();
     }
     
-    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    /*void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
             stream.SendNext(speed);
-            stream.SendNext(enabled);
         }
         else
         {
             speed = (float)stream.ReceiveNext();
-            enabled = (bool)stream.ReceiveNext();
         }
-    }
+    }*/
 
     public void EnableSelf()
     {
