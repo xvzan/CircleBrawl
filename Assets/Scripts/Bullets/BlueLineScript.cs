@@ -7,38 +7,63 @@ public class BlueLineScript : Photon.MonoBehaviour
 {
     public Rigidbody2D sender;
     public Rigidbody2D receiver;
-    public int receiverID;
     public LineRenderer MyLine;
     public float speed = 2;
     public float damage;
     public float maxtime = 2;
     float timepsd = 0;
-    public bool missed;
-    public bool Idrag = true;
+    //public bool missed;
+    public bool Idrag = false;
 
 	// Use this for initialization
 	void Start () {
         timepsd = 0;
-        Idrag = true;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!missed)
-            Paint();
-        if (timepsd >= maxtime || receiver == null || sender == null)
+        if (timepsd >= maxtime || sender == null)
             gameObject.GetComponent<DestroyScript>().Destroyself();
-        if (Idrag && receiver != null)
-            IHit();
+        if (Idrag && receiver == null)
+            gameObject.GetComponent<DestroyScript>().Destroyself();
+        drawmyline(sender.position, receiver.position);
     }
 
     void FixedUpdate()
     {
-        if (!missed)
+        if (Idrag)
         {
             timepsd += Time.fixedDeltaTime;
             receiver.GetComponent<HPScript>().GetHurt(damage * Time.fixedDeltaTime);
         }
+    }
+
+    public void DoMyJob(int idv,int ids,Vector2 place,float sp,float dm,float mt)
+    {
+        photonView.RPC("BlueLineWorking", PhotonTargets.All, idv, ids, place, sp, dm, mt);
+    }
+
+    [PunRPC]
+    void BlueLineWorking(int victimId, int senderId, Vector2 missedplace, float spd, float dmg, float maxT)
+    {
+        if (victimId != 0)
+        {
+            receiver = PhotonView.Find(victimId).GetComponent<Rigidbody2D>();
+            sender = PhotonView.Find(senderId).GetComponent<Rigidbody2D>();
+            damage = dmg;
+            speed = spd;
+            receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
+            maxtime = maxT;
+            if (receiver.gameObject.GetPhotonView().isMine)
+                Idrag = true;
+        }
+        else
+        {
+            sender = PhotonView.Find(senderId).GetComponent<Rigidbody2D>();
+            drawmyline(sender.position, missedplace);
+            StartCoroutine(EraseLine());
+        }
+        enabled = true;
     }
 
     public void AddConstentCentrallyVelocity(Rigidbody2D victim, MoveScript worker)
@@ -51,33 +76,7 @@ public class BlueLineScript : Photon.MonoBehaviour
         if (receiver != null)
             receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
     }
-
-    public void IHit()
-    {
-        receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
-        Idrag = false;
-    }
-
-    public void IMissed(Vector2 v2)
-    {
-        missed = true;
-        photonView.RPC("drawmyline", PhotonTargets.All, sender.position, v2);
-        StartCoroutine(EraseLine());
-    }
-
-    void Paint()
-    {
-        drawmyline(sender.position, receiver.position);
-    }
-    
-    [PunRPC]
-    void catchyou(int catchID)
-    {
-        missed = false;
-        receiver = PhotonView.Find(catchID).GetComponent<Rigidbody2D>();
-    }
-
-    [PunRPC]
+            
     void drawmyline(Vector2 v21,Vector2 v22)
     {
         MyLine.SetPosition(0, v21);
@@ -87,30 +86,7 @@ public class BlueLineScript : Photon.MonoBehaviour
     IEnumerator EraseLine()
     {
         yield return new WaitForSeconds(0.1f);
-        gameObject.GetComponent<DestroyScript>().Destroyself();
+        gameObject.GetComponent<DestroyScript>().SDestroy();
     }
     
-    /*void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
-        if (stream.isWriting)
-        {
-            stream.SendNext(speed);
-        }
-        else
-        {
-            speed = (float)stream.ReceiveNext();
-        }
-    }*/
-
-    public void EnableSelf()
-    {
-        if (receiverID != 0)
-            photonView.RPC("catchyou", PhotonTargets.All, receiverID);
-        photonView.RPC("SelfEnableBlue", PhotonTargets.All);
-    }
-    [PunRPC]
-    void SelfEnableBlue()
-    {
-        enabled = true;
-    }
 }

@@ -11,7 +11,7 @@ public class DestroyScript : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    void SDestroy()
+    public void SDestroy()
     {
         GameObject.Destroy(this.gameObject);
     }

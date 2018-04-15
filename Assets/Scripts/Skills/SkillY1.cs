@@ -7,7 +7,6 @@ public class SkillY1 : Photon.MonoBehaviour
 {
     public GameObject MyLineObj;
     public GameObject MyLine;
-    //BlueLineScript MylineScript;
     public float maxdistance = 10;
     public bool skillavaliable;
     public float speed;
@@ -20,8 +19,6 @@ public class SkillY1 : Photon.MonoBehaviour
         if (!photonView.isMine)
             enabled = false;
         skillavaliable = true;
-        //MylineScript = MyLineObj.GetComponent<BlueLineScript>();
-        MyLineObj.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -59,25 +56,11 @@ public class SkillY1 : Photon.MonoBehaviour
             Collider2D hit = Physics2D.OverlapPoint(realplace);
             if (hit.GetComponent<HPScript>() != null)
             {
-                /*
-                MylineScript.missed = false;
-                MylineScript.receiver = hit.gameObject;
-                MylineScript.maxtime = maxtime;
-                MylineScript.damage = damage;
-                */
-                MyLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
-                MyLine.GetComponent<BlueLineScript>().maxtime = maxtime;
-                MyLine.GetComponent<BlueLineScript>().damage = damage;
-                MyLine.GetComponent<BlueLineScript>().speed = speed;
-                MyLine.GetComponent<BlueLineScript>().receiverID = hit.gameObject.GetPhotonView().photonView.viewID;
-                MyLine.GetComponent<BlueLineScript>().EnableSelf();
+                MyLine.GetComponent<BlueLineScript>().DoMyJob(hit.gameObject.GetPhotonView().photonView.viewID, gameObject.GetPhotonView().viewID, Vector2.zero, speed, damage, maxtime);
                 return;
             }
         }
-        MyLine.GetComponent<BlueLineScript>().sender = gameObject.GetComponent<Rigidbody2D>();
-        MyLine.GetComponent<BlueLineScript>().receiverID = 0;
-        MyLine.GetComponent<BlueLineScript>().IMissed(realplace);
-        MyLine.GetComponent<BlueLineScript>().EnableSelf();
+        MyLine.GetComponent<BlueLineScript>().DoMyJob(0, gameObject.GetPhotonView().viewID, realplace, speed, damage, maxtime);
     }
 
     IEnumerator Skillcooldown()
