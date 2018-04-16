@@ -94,7 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxtime: 0
-  bombpower: 0
   bombdamage: 0
   sender: {fileID: 0}
 --- !u!114 &114430392949751282
@@ -135,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8201d6de9ff9d542b781c883e47794e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  breakable: 1
 --- !u!114 &114540505401986750
 MonoBehaviour:
   m_ObjectHideFlags: 1

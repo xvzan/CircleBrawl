@@ -25,7 +25,7 @@ public class BombExplode : Photon.MonoBehaviour
         pasttime += Time.fixedDeltaTime;
         if (pasttime >= maxtime)
         {
-            photonView.RPC("SelfDestroy", PhotonTargets.All);
+            gameObject.GetComponent<DestroyScript>().Destroyself();
         }
     }
 
@@ -46,17 +46,11 @@ public class BombExplode : Photon.MonoBehaviour
             //hp.GetKicked(explforce.normalized * bombpower);
             hp.GetHurt(bombdamage);
         }
-        photonView.RPC("SelfDestroy", PhotonTargets.All);
+        gameObject.GetComponent<DestroyScript>().Destroyself();
     }
     
     private void OnCollisionExit2D(Collision2D collision)
     {
         selfprotect = false;
-    }
-
-    [PunRPC]
-    void SelfDestroy()
-    {
-        GameObject.Destroy(this.gameObject);
     }
 }

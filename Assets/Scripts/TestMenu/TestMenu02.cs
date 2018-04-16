@@ -28,13 +28,14 @@ public class TestMenu02 : Photon.PunBehaviour
         Roomname.text = PhotonNetwork.room.Name;
     }
     
-    /*
     private void OnEnable()
     {
-        //setreadystatusonline();
-        //showpanel();
+        if (PhotonNetwork.inRoom)
+        {
+            setreadystatusonline();
+            showpanel();
+        }
     }
-    */
 
     public void SwtichToMenu01()
     {

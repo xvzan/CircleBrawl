@@ -20,18 +20,18 @@ public class HPScript : Photon.MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.magnitude > safeground.transform.lossyScale.x / 2)
+        if (transform.position.magnitude > safeground.transform.lossyScale.x / 2 && photonView.isMine)
         {
             currentHP -= outhurt * Time.fixedDeltaTime;
         }
     }
 
     void LateUpdate () {
-		if(currentHP <= 0)
+		if(currentHP <= 0 && photonView.isMine)
         {
-            GameObject.Destroy(this.gameObject);
+            gameObject.GetComponent<DestroyScript>().Destroyself();
         }
-        if(currentHP > maxHP)
+        if(currentHP > maxHP && photonView.isMine)
         {
             currentHP = maxHP;
         }
@@ -69,6 +69,7 @@ public class HPScript : Photon.MonoBehaviour
         currentHP -= damage;
     }
 
+    /*
     public void GetKicked(Vector2 force)
     {
         photonView.RPC("DoGetKicked", PhotonTargets.All, force);
@@ -78,16 +79,18 @@ public class HPScript : Photon.MonoBehaviour
     void DoGetKicked(Vector2 force)
     {
         GetComponent<Rigidbody2D>().AddForce(force);
-    }
+    }*/
 
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.isWriting)
         {
+            stream.SendNext(maxHP);
             stream.SendNext(currentHP);
         }
         else
         {
+            maxHP = (float)stream.ReceiveNext();
             currentHP = (float)stream.ReceiveNext();
         }
     }

@@ -31,12 +31,7 @@ public class SelfExplodeScript : Photon.MonoBehaviour
 
     public void Skill()
     {
-        photonView.RPC("RealSkill", PhotonTargets.All);
-    }
-
-    [PunRPC]
-    public void RealSkill()
-    {
+        //photonView.RPC("RealSkill", PhotonTargets.All);
         gameObject.GetComponent<MoveScript>().stopwalking();
         float radius = 1.5f;
         Vector2 actionplace = transform.position;
@@ -64,4 +59,9 @@ public class SelfExplodeScript : Photon.MonoBehaviour
             }
         }
     }
+
+    /*[PunRPC]
+    public void RealSkill()
+    {
+    }*/
 }

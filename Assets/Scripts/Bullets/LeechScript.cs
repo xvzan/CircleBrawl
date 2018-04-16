@@ -36,7 +36,7 @@ public class LeechScript : Photon.MonoBehaviour
         }
         if (pasttime >= maxtime)
         {
-            photonView.RPC("SelfDestroy", PhotonTargets.All);
+            gameObject.GetComponent<DestroyScript>().Destroyself();
         }
     }
 
@@ -53,7 +53,7 @@ public class LeechScript : Photon.MonoBehaviour
             hp.GetHurt(leechdamage);
             sender.GetComponent<HPScript>().GetHurt(-leechdamage);
         }
-        photonView.RPC("SelfDestroy", PhotonTargets.All);
+        gameObject.GetComponent<DestroyScript>().Destroyself();
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -102,13 +102,7 @@ public class LeechScript : Photon.MonoBehaviour
         }
         return vector.normalized;
     }
-
-    [PunRPC]
-    void SelfDestroy()
-    {
-        GameObject.Destroy(this.gameObject);
-    }
-    [PunRPC]
+    
     void SelfTurn(Vector2 vector)
     {
         gameObject.GetComponent<Rigidbody2D>().velocity = vector;

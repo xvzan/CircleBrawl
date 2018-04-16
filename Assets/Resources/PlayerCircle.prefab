@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114719163519757270}
   - component: {fileID: 114191253232522832}
+  - component: {fileID: 114985266391881892}
   m_Layer: 0
   m_Name: PlayerCircle
   m_TagString: Player
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03dece7b20918404db03f7310b1b564f, type: 3}
   m_Name: 
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00cebd513ffaba64e9451cbc589c91a2, type: 3}
   m_Name: 
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c95789ab00547204e8ee16ed52a680db, type: 3}
   m_Name: 
@@ -225,7 +226,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d104ec09daaecba4b883605aaac2cb51, type: 3}
   m_Name: 
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3065bfa2e3adb5d478f01e8e11b5e8ef, type: 3}
   m_Name: 
@@ -346,7 +347,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca3cb61e72fa6b344995db54bc9fd45c, type: 3}
   m_Name: 
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: effb913bcedefa1419f6b222913e9acf, type: 3}
   m_Name: 
@@ -415,7 +416,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3139bb7893d0c3845bf7dcb2dcaf3c7c, type: 3}
   m_Name: 
@@ -438,7 +439,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1808039536022388}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2414e2d9d5bbd884db0d139aea0e389a, type: 3}
   m_Name: 
@@ -480,6 +481,18 @@ MonoBehaviour:
   selfvelocity: {x: 0, y: 0}
   PlayerRb2d: {fileID: 50066458329441964}
   targeticon: {fileID: 0}
+--- !u!114 &114985266391881892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8201d6de9ff9d542b781c883e47794e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakable: 0
 --- !u!120 &120593926193960378
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -582,7 +595,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6e3f986af96b0864f9b448013dd16ddf, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -599,8 +612,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 671446005
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}

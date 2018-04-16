@@ -16,8 +16,6 @@ public class SkillY1 : Photon.MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        if (!photonView.isMine)
-            enabled = false;
         skillavaliable = true;
     }
 

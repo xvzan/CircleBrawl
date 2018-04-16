@@ -5,6 +5,8 @@ using Photon;
 
 public class DestroyScript : Photon.MonoBehaviour
 {
+    public bool breakable = false;
+
     public void Destroyself()
     {
         photonView.RPC("SDestroy", PhotonTargets.All);

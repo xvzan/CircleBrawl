@@ -13,8 +13,6 @@ public class TestSkillLightning : Photon.MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (!photonView.isMine)
-            enabled = false;
         skillavaliable = true;
     }
 
@@ -41,7 +39,7 @@ public class TestSkillLightning : Photon.MonoBehaviour
         {
             realplace = hit2D.point;
             Drawline(realplace);
-            if (hit2D.collider.GetComponent<DestroyScript>() != null)
+            if (hit2D.collider.GetComponent<DestroyScript>() != null && hit2D.collider.GetComponent<DestroyScript>().breakable == true)
                 hit2D.collider.GetComponent<DestroyScript>().Destroyself();
             else if (hit2D.collider.GetComponent<RBScript>() != null)
             {

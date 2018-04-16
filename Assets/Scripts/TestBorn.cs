@@ -20,7 +20,7 @@ public class TestBorn : Photon.MonoBehaviour
         MyUI.GetComponent<SkillsLink>().linktome();
         localPlayer.GetComponent<DoSkill>().enabled = true;
         localPlayer.GetComponent<MoveScript>().enabled = true;
-        //localPlayer.GetComponent<LeftButtonSkill>().enabled = true;
+        MyUI.GetComponent<SkillsLink>().alphaset();
         localPlayer.transform.Find("Markicon").GetComponent<SpriteRenderer>().color = Color.red;
         safeground = GameObject.Find("GroundCircle");
         diameter = safeground.transform.lossyScale.x;
