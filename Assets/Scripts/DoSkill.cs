@@ -49,7 +49,7 @@ public class DoSkill : Photon.MonoBehaviour
 
     public void FireReset()
     {
-        Fire = donothing;
+        Fire = null;
     }
 
     void donothing(Vector2 vector)

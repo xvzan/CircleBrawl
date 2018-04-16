@@ -34,6 +34,7 @@ public class TestMenu02 : Photon.PunBehaviour
         {
             setreadystatusonline();
             showpanel();
+            Roomname.text = PhotonNetwork.room.Name;
         }
     }
 
