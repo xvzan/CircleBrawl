@@ -20,8 +20,6 @@ public class SkillC3 : Photon.MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        if (photonView.isMine)
-            enabled = true;
         currentcooldown = cooldowntime;
         //ShadowCircle.GetComponent<CircleCollider2D>().enabled = false;
         //ShadowCircle.GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 127);
