@@ -56,6 +56,7 @@ public class BlueLineScript : Photon.MonoBehaviour
             maxtime = maxT;
             if (receiver.gameObject.GetPhotonView().isMine)
                 Idrag = true;
+            receiver.GetComponent<DoSkill>().ClearDe += gameObject.GetComponent<DestroyScript>().Destroyself;
         }
         else
         {
@@ -74,7 +75,10 @@ public class BlueLineScript : Photon.MonoBehaviour
     void OnDestroy()
     {
         if (receiver != null)
+        {
             receiver.GetComponent<MoveScript>().cook -= AddConstentCentrallyVelocity;
+            receiver.GetComponent<DoSkill>().ClearDe -= gameObject.GetComponent<DestroyScript>().Destroyself;
+        }
     }
             
     void drawmyline(Vector2 v21,Vector2 v22)

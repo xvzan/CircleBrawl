@@ -81,5 +81,6 @@ public class SkillC3 : Photon.MonoBehaviour
         }
         HaveShadow = false;
         GameObject.Destroy(MyShadow);
+        gameObject.GetComponent<DoSkill>().DoClearJob();
     }
 }
