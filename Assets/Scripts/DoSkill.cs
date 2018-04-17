@@ -8,11 +8,14 @@ public class DoSkill : Photon.MonoBehaviour
     public static int singing;
     public delegate void PointSkill(Vector2 actionplace);
     public PointSkill Fire;
+    public delegate void NoPointSkill();
+    public NoPointSkill ClearDe;
 
     // Use this for initialization
     void Start ()
     {
-        Fire = donothing;
+        Fire = null;
+        ClearDe = null;
     }
 
     // Update is called once per frame
@@ -32,28 +35,20 @@ public class DoSkill : Photon.MonoBehaviour
 
     public void justdoit()
     {
-        //photonView.RPC("realdoit", PhotonTargets.All);
         if (!photonView.isMine)
             return;
         Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         FireReset();
     }
 
-    /*
-    [PunRPC]
-    public void realdoit()
-    {
-        Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-    }
-    */
-
     public void FireReset()
     {
         Fire = null;
     }
 
-    void donothing(Vector2 vector)
+    public void DoClearJob()
     {
-
+        ClearDe();
+        ClearDe = null;
     }
 }
