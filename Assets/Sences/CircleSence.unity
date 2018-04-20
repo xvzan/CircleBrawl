@@ -1360,7 +1360,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &82959988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,7 +1770,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &120388162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2320,7 +2320,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &153439835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4416,7 +4416,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &260681640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7152,7 +7152,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &454634891
 GameObject:
   m_ObjectHideFlags: 0
@@ -8585,7 +8585,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &534143489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14110,7 +14110,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &885262556
 GameObject:
   m_ObjectHideFlags: 0
@@ -14878,7 +14878,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &942884277
 GameObject:
   m_ObjectHideFlags: 0
@@ -18039,6 +18039,7 @@ GameObject:
   - component: {fileID: 1132707017}
   - component: {fileID: 1132707019}
   - component: {fileID: 1132707018}
+  - component: {fileID: 1132707020}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -18107,6 +18108,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132707016}
+--- !u!225 &1132707020
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1132707016}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1135547328
 GameObject:
   m_ObjectHideFlags: 0
@@ -18790,7 +18802,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1194174356
 GameObject:
   m_ObjectHideFlags: 0
@@ -21954,7 +21966,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &1288920965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24964,13 +24976,19 @@ GameObject:
   - component: {fileID: 1481734803}
   - component: {fileID: 1481734807}
   - component: {fileID: 1481734808}
+  - component: {fileID: 1481734809}
+  - component: {fileID: 1481734811}
+  - component: {fileID: 1481734810}
+  - component: {fileID: 1481734812}
+  - component: {fileID: 1481734813}
+  - component: {fileID: 1481734814}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1481734803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25071,6 +25089,123 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySoldier: {fileID: 0}
+--- !u!114 &1481734809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0be0851945121438c85155abeac441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Y1: {fileID: 1189688973}
+  Y1a: {fileID: 769210188}
+  Y1b: {fileID: 741884441}
+  Y2: {fileID: 1752489913}
+  Y2a: {fileID: 1312721421}
+  Y2b: {fileID: 1802303815}
+  Y3: {fileID: 1745878155}
+  Y3a: {fileID: 983934037}
+  Y3b: {fileID: 454634894}
+  Y4: {fileID: 912207628}
+  Y4a: {fileID: 86799881}
+  Y4b: {fileID: 300703778}
+--- !u!114 &1481734810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 827d3452457b73b4e81fe48a9ea847ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  R1: {fileID: 1641107337}
+  R1a: {fileID: 1249473009}
+  R1b: {fileID: 241622967}
+  R2: {fileID: 1159202781}
+  R2a: {fileID: 589719818}
+  R2b: {fileID: 2016943588}
+  R3: {fileID: 1265404683}
+  R3a: {fileID: 1957499454}
+  R3b: {fileID: 1907049678}
+--- !u!114 &1481734811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c57fff883a21164d9efb3a3ba6727c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  T1: {fileID: 884993857}
+  T1a: {fileID: 1972974906}
+  T1b: {fileID: 656570390}
+  T2: {fileID: 1906932418}
+  T2a: {fileID: 337697756}
+  T2b: {fileID: 29116319}
+  T3: {fileID: 1519306062}
+  T3a: {fileID: 1224541291}
+  T3b: {fileID: 1695798751}
+--- !u!114 &1481734812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be06cf68c46c4cf41824030dfd5a83b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  E1: {fileID: 1817792518}
+  E1a: {fileID: 249878268}
+  E1b: {fileID: 665893811}
+  E2: {fileID: 1589905738}
+  E2a: {fileID: 1416951520}
+  E2b: {fileID: 1677951506}
+  E3: {fileID: 471323248}
+  E3a: {fileID: 592125998}
+  E3b: {fileID: 1931272052}
+  E4: {fileID: 2059999659}
+  E4a: {fileID: 1239366448}
+  E4b: {fileID: 1207049652}
+--- !u!114 &1481734813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0837ea4f6984595408c58f67b0907426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  D1: {fileID: 940852521}
+  D2: {fileID: 78901947}
+  D3: {fileID: 727648731}
+  D4: {fileID: 707617652}
+  D5: {fileID: 1244102740}
+--- !u!114 &1481734814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0d97257a6dd524fb5b6011de2b8024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  C1: {fileID: 943904563}
+  C2: {fileID: 670170015}
+  C3: {fileID: 442969157}
+  C4: {fileID: 956410321}
 --- !u!1 &1485858707
 GameObject:
   m_ObjectHideFlags: 0
@@ -26349,7 +26484,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &1580347947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27484,7 +27619,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1643183097
 GameObject:
   m_ObjectHideFlags: 0
@@ -30128,7 +30263,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1819923117
 GameObject:
   m_ObjectHideFlags: 0
@@ -34664,7 +34799,7 @@ CanvasGroup:
   m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &2094727395
 MonoBehaviour:
   m_ObjectHideFlags: 0

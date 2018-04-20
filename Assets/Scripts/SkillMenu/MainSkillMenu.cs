@@ -15,10 +15,18 @@ public class MainSkillMenu : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (SkillMenu.activeInHierarchy)
-                SkillMenu.SetActive(false);
+            if (SkillMenu.GetComponent<CanvasGroup>().alpha == 0)
+            {
+                SkillMenu.GetComponent<CanvasGroup>().alpha = 1;
+                SkillMenu.GetComponent<CanvasGroup>().interactable = true;
+                SkillMenu.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            }
             else
-                SkillMenu.SetActive(true);
+            {
+                SkillMenu.GetComponent<CanvasGroup>().alpha = 0;
+                SkillMenu.GetComponent<CanvasGroup>().interactable = false;
+                SkillMenu.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            }
         }
 	}
 }
