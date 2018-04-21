@@ -23,16 +23,17 @@ public class SkillsLink : MonoBehaviour {
 
     public void alphaset()
     {
-        SetY1();
-        SetC3();
-        SetE1();
-        SetTS01();
-        SetTS02();
-        SetTS03();
-        SetTSle();
-        SetTSli();
+        gameObject.GetComponent<SetSkillC>().SetC();
+        gameObject.GetComponent<SetSkillD>().SetD();
+        gameObject.GetComponent<SetSkillE>().SetE();
+        gameObject.GetComponent<SetSkillF>().SetF();
+        gameObject.GetComponent<SetSkillG>().SetG();
+        gameObject.GetComponent<SetSkillR>().SetR();
+        gameObject.GetComponent<SetSkillT>().SetT();
+        gameObject.GetComponent<SetSkillY>().SetY();
     }
 
+    /*
     public void SetY1()
     {
         SkillY1 MySkill = mySoldier.GetComponent<SkillY1>();
@@ -74,4 +75,5 @@ public class SkillsLink : MonoBehaviour {
         TestSkillLightning MySkill = mySoldier.GetComponent<TestSkillLightning>();
         MySkill.enabled = true;
     }
+    */
 }

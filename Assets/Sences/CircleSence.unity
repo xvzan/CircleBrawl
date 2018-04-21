@@ -7085,7 +7085,7 @@ MonoBehaviour:
   LevelText: {fileID: 718761964}
   LevelPriceText: {fileID: 1995488948}
   SkillToggle: {fileID: 442969157}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
@@ -14043,7 +14043,7 @@ MonoBehaviour:
   LevelText: {fileID: 1128585827}
   LevelPriceText: {fileID: 1218342895}
   SkillToggle: {fileID: 884993857}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
@@ -14811,7 +14811,7 @@ MonoBehaviour:
   LevelText: {fileID: 1248087963}
   LevelPriceText: {fileID: 478089622}
   SkillToggle: {fileID: 940852521}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
@@ -18735,7 +18735,7 @@ MonoBehaviour:
   LevelText: {fileID: 1894545781}
   LevelPriceText: {fileID: 330975345}
   SkillToggle: {fileID: 1189688973}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
@@ -24982,6 +24982,8 @@ GameObject:
   - component: {fileID: 1481734812}
   - component: {fileID: 1481734813}
   - component: {fileID: 1481734814}
+  - component: {fileID: 1481734815}
+  - component: {fileID: 1481734816}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25206,6 +25208,30 @@ MonoBehaviour:
   C2: {fileID: 670170015}
   C3: {fileID: 442969157}
   C4: {fileID: 956410321}
+--- !u!114 &1481734815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f11f2dad5a79624dac11d59305e1a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  F1: {fileID: 1426455360}
+--- !u!114 &1481734816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1481734802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86808ce345e02a04196dde5b3934a0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  G1: {fileID: 2108460296}
 --- !u!1 &1485858707
 GameObject:
   m_ObjectHideFlags: 0
@@ -27552,7 +27578,7 @@ MonoBehaviour:
   LevelText: {fileID: 1200857462}
   LevelPriceText: {fileID: 267688608}
   SkillToggle: {fileID: 1641107337}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
@@ -30196,7 +30222,7 @@ MonoBehaviour:
   LevelText: {fileID: 1510333050}
   LevelPriceText: {fileID: 1166666432}
   SkillToggle: {fileID: 1817792518}
-  SkillLevel: 0
+  SkillLevel: 1
   BottomLevel: 0
   TopLevel: 6
   TopLevel00: 0
