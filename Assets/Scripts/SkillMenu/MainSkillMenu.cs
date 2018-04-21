@@ -20,12 +20,14 @@ public class MainSkillMenu : MonoBehaviour {
                 SkillMenu.GetComponent<CanvasGroup>().alpha = 1;
                 SkillMenu.GetComponent<CanvasGroup>().interactable = true;
                 SkillMenu.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                gameObject.GetComponent<SkillsLink>().alphaset();
             }
             else
             {
                 SkillMenu.GetComponent<CanvasGroup>().alpha = 0;
                 SkillMenu.GetComponent<CanvasGroup>().interactable = false;
                 SkillMenu.GetComponent<CanvasGroup>().blocksRaycasts = false;
+                gameObject.GetComponent<SkillsLink>().alphaset();
             }
         }
 	}

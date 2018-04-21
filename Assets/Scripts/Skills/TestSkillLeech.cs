@@ -23,7 +23,7 @@ public class TestSkillLeech : Photon.MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire4") && skillavaliable)
+        if (Input.GetButtonDown("FireT") && skillavaliable)
         {
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;

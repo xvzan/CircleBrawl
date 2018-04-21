@@ -20,7 +20,7 @@ public class TestSkill02 : Photon.MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("Fire2") && skillavaliable)
+        if (Input.GetButtonDown("FireR") && skillavaliable)
         {
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;
