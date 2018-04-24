@@ -7,7 +7,7 @@ public class BombExplode : Photon.MonoBehaviour
 {
     private float pasttime;
     public float maxtime;
-    //public float bombpower = 15;
+    public float bombpower;
     public float bombdamage;
     public GameObject sender;
     private bool selfprotect;
@@ -42,7 +42,7 @@ public class BombExplode : Photon.MonoBehaviour
             Vector2 explforce;
             Rigidbody2D selfrb = gameObject.GetComponent<Rigidbody2D>();
             explforce = rb.position - selfrb.position;
-            collision.gameObject.GetComponent<RBScript>().GetPushed(explforce.normalized * 15, 1f);
+            collision.gameObject.GetComponent<RBScript>().GetPushed(explforce.normalized * bombpower, 1f);
             //hp.GetKicked(explforce.normalized * bombpower);
             hp.GetHurt(bombdamage);
         }
