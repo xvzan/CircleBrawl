@@ -9,13 +9,13 @@ public class DoSkill : Photon.MonoBehaviour
     public delegate void PointSkill(Vector2 actionplace);
     public PointSkill Fire;
     public delegate void NoPointSkill();
-    public NoPointSkill ClearDe;
+    public NoPointSkill ClearDebuff;
 
     // Use this for initialization
     void Start ()
     {
         Fire = null;
-        ClearDe = null;
+        ClearDebuff = null;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class DoSkill : Photon.MonoBehaviour
 
     public void justdoit()
     {
-        if (!photonView.isMine)
+        if (!photonView.isMine || Fire == null)
             return;
         Fire(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         FireReset();
@@ -48,7 +48,7 @@ public class DoSkill : Photon.MonoBehaviour
 
     public void DoClearJob()
     {
-        ClearDe();
-        ClearDe = null;
+        ClearDebuff();
+        ClearDebuff = null;
     }
 }

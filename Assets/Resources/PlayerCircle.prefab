@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114719163519757270}
   - component: {fileID: 114191253232522832}
+  - component: {fileID: 114423276684691626}
   - component: {fileID: 114985266391881892}
   m_Layer: 0
   m_Name: PlayerCircle
@@ -329,6 +330,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114423276684691626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbbd7f3400e735043a875ba16e629c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxdistance: 0
+  bulletspeed: 5
+  fireball: {fileID: 1680992960079014, guid: 214613f7a65b89046a43deea823fea0b, type: 2}
+  bulletamount: 7
+  force: 0
+  damage: 0
+  cooldowntime: 3
+  skillavaliable: 0
 --- !u!114 &114482920916306366
 MonoBehaviour:
   m_ObjectHideFlags: 1

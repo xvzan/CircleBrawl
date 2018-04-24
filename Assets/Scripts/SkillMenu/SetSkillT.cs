@@ -38,10 +38,16 @@ public class SetSkillT : Photon.MonoBehaviour
             Soldier.GetComponent<TestSkillLeech>().enabled = true;
             return;
         }
+        if (T2.isOn && T2a.isOn)
+        {
+            Soldier.GetComponent<SkillT2>().enabled = true;
+            return;
+        }
     }
 
     void AllTOff()
     {
         Soldier.GetComponent<TestSkillLeech>().enabled = false;
+        Soldier.GetComponent<SkillT2>().enabled = false;
     }
 }
