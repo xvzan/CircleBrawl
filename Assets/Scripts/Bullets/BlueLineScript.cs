@@ -69,7 +69,9 @@ public class BlueLineScript : Photon.MonoBehaviour
 
     public void AddConstentCentrallyVelocity(Rigidbody2D victim, MoveScript worker)
     {
-        worker.VelotoAdd += (sender.position - victim.position).normalized * speed;
+        Vector2 distance = sender.position - victim.position;
+        if (distance.sqrMagnitude > 1.1)
+            worker.VelotoAdd += (sender.position - victim.position).normalized * speed;
     }
 
     void OnDestroy()
