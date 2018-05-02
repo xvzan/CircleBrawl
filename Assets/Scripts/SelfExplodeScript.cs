@@ -33,6 +33,8 @@ public class SelfExplodeScript : Photon.MonoBehaviour
     {
         //photonView.RPC("RealSkill", PhotonTargets.All);
         gameObject.GetComponent<MoveScript>().stopwalking();
+        currentcooldown = 0;
+        skillavaliable = false;
         float radius = 1.5f;
         Vector2 actionplace = transform.position;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(actionplace, radius);

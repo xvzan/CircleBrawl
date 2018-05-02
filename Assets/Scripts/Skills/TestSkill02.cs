@@ -7,13 +7,15 @@ public class TestSkill02 : Photon.MonoBehaviour
 {
 
     public float maxdistance;
+    private float currentcooldown;
+    public float cooldowntime = 3;
     public bool skillavaliable;
     MoveScript MS;
 
     // Use this for initialization
     void Start ()
     {
-        skillavaliable = true;
+        currentcooldown = cooldowntime;
         MS = GetComponent<MoveScript>();
     }
 	
@@ -25,6 +27,18 @@ public class TestSkill02 : Photon.MonoBehaviour
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (skillavaliable)
+            return;
+        if (currentcooldown >= cooldowntime)
+        {
+            skillavaliable = true;
+        }
+        else
+            currentcooldown += Time.fixedDeltaTime;
     }
 
     public void Skill(Vector2 actionplace)
@@ -44,7 +58,8 @@ public class TestSkill02 : Photon.MonoBehaviour
             Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
             gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
             MS.controllable = true;
-            StartCoroutine(Skillcooldown());
+            currentcooldown = 0;
+            skillavaliable = false;
             if (Physics2D.OverlapPoint(realplace))
             {
                 Collider2D hit = Physics2D.OverlapPoint(realplace);
@@ -65,12 +80,5 @@ public class TestSkill02 : Photon.MonoBehaviour
                 transform.position = realplace;
             }
         }
-    }
-    
-    IEnumerator Skillcooldown()
-    {
-        skillavaliable = false;
-        yield return new WaitForSeconds(3);
-        skillavaliable = true;
     }
 }

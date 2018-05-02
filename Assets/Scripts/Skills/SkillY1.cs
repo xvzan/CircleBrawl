@@ -8,6 +8,8 @@ public class SkillY1 : Photon.MonoBehaviour
     public GameObject MyLineObj;
     public GameObject MyLine;
     public float maxdistance = 10;
+    private float currentcooldown;
+    public float cooldowntime = 3;
     public bool skillavaliable;
     public float speed;
     public float damage;
@@ -16,7 +18,7 @@ public class SkillY1 : Photon.MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        skillavaliable = true;
+        currentcooldown = cooldowntime;
     }
 
     // Update is called once per frame
@@ -31,10 +33,17 @@ public class SkillY1 : Photon.MonoBehaviour
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
     }
-
-    void FixedUpdate()
+    
+    private void FixedUpdate()
     {
-
+        if (skillavaliable)
+            return;
+        if (currentcooldown >= cooldowntime)
+        {
+            skillavaliable = true;
+        }
+        else
+            currentcooldown += Time.fixedDeltaTime;
     }
 
     public void Skill(Vector2 actionplace)
@@ -48,7 +57,8 @@ public class SkillY1 : Photon.MonoBehaviour
         }   //半径小于自身半径时不施法
         Vector2 realplace = singplace + skilldirection.normalized * realdistance;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        StartCoroutine(Skillcooldown());//技能冷却
+        currentcooldown = 0;
+        skillavaliable = false;
         if (Physics2D.OverlapPoint(realplace))
         {
             Collider2D hit = Physics2D.OverlapPoint(realplace);
@@ -59,12 +69,5 @@ public class SkillY1 : Photon.MonoBehaviour
             }
         }
         MyLine.GetComponent<BlueLineScript>().DoMyJob(0, gameObject.GetPhotonView().viewID, realplace, speed, damage, maxtime);
-    }
-
-    IEnumerator Skillcooldown()
-    {
-        skillavaliable = false;
-        yield return new WaitForSeconds(3);
-        skillavaliable = true;
     }
 }

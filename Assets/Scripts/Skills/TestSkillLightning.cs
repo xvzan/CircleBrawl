@@ -7,13 +7,15 @@ public class TestSkillLightning : Photon.MonoBehaviour
 {
 
     public float maxdistance = 10;
+    private float currentcooldown;
+    public float cooldowntime = 3;
     public bool skillavaliable;
     public LineRenderer line;
 
     // Use this for initialization
     void Start()
     {
-        skillavaliable = true;
+        currentcooldown = cooldowntime;
     }
 
     // Update is called once per frame
@@ -24,6 +26,18 @@ public class TestSkillLightning : Photon.MonoBehaviour
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (skillavaliable)
+            return;
+        if (currentcooldown >= cooldowntime)
+        {
+            skillavaliable = true;
+        }
+        else
+            currentcooldown += Time.fixedDeltaTime;
     }
 
     public void Skill(Vector2 actionplace)
@@ -53,7 +67,8 @@ public class TestSkillLightning : Photon.MonoBehaviour
             realplace = selfrb2d.position + maxdistance * skilldirection.normalized;
             Drawline(realplace);
         }
-        StartCoroutine(Skillcooldown());
+        currentcooldown = 0;
+        skillavaliable = false;
     }
 
     void Drawline(Vector2 destn)
@@ -67,13 +82,6 @@ public class TestSkillLightning : Photon.MonoBehaviour
         line.SetPosition(0, GetComponent<Rigidbody2D>().position);
         line.SetPosition(1, destn);
         StartCoroutine(EraseLine());
-    }
-
-    IEnumerator Skillcooldown()
-    {
-        skillavaliable = false;
-        yield return new WaitForSeconds(3);
-        skillavaliable = true;
     }
 
     IEnumerator EraseLine()
