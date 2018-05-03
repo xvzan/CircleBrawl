@@ -5,7 +5,7 @@ using Photon;
 
 public class SkillE1 : Photon.MonoBehaviour
 {
-
+    public CooldownImage MyImageScript;
     public GameObject TheRock;
     public float maxdistance = 5;
     public float damage = 10;
@@ -39,7 +39,10 @@ public class SkillE1 : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill(Vector2 actionplace)

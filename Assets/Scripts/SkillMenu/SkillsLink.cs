@@ -33,47 +33,8 @@ public class SkillsLink : MonoBehaviour {
         gameObject.GetComponent<SetSkillY>().SetY();
     }
 
-    /*
-    public void SetY1()
+    void SetSkillImages()
     {
-        SkillY1 MySkill = mySoldier.GetComponent<SkillY1>();
-        MySkill.enabled = true;
+
     }
-    public void SetC3()
-    {
-        SkillC3 MySkill = mySoldier.GetComponent<SkillC3>();
-        MySkill.enabled = true;
-    }
-    public void SetE1()
-    {
-        SkillE1 MySkill = mySoldier.GetComponent<SkillE1>();
-        MySkill.enabled = true;
-    }
-    public void SetTS01()
-    {
-        TestSkill01 MySkill = mySoldier.GetComponent<TestSkill01>();
-        MySkill.enabled = true;
-    }
-    public void SetTS02()
-    {
-        TestSkill02 MySkill = mySoldier.GetComponent<TestSkill02>();
-        MySkill.enabled = true;
-    }
-    public void SetTS03()
-    {
-        TestSkill03 MySkill = mySoldier.GetComponent<TestSkill03>();
-        MySkill.enabled = true;
-        mySoldier.GetComponent<SelfExplodeScript>().enabled = true;
-    }
-    public void SetTSle()
-    {
-        TestSkillLeech MySkill = mySoldier.GetComponent<TestSkillLeech>();
-        MySkill.enabled = true;
-    }
-    public void SetTSli()
-    {
-        TestSkillLightning MySkill = mySoldier.GetComponent<TestSkillLightning>();
-        MySkill.enabled = true;
-    }
-    */
 }

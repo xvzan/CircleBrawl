@@ -5,6 +5,7 @@ using Photon;
 
 public class SkillY1 : Photon.MonoBehaviour
 {
+    public CooldownImage MyImageScript;
     public GameObject MyLineObj;
     public GameObject MyLine;
     public float maxdistance = 10;
@@ -43,7 +44,10 @@ public class SkillY1 : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill(Vector2 actionplace)

@@ -11,6 +11,7 @@ public class SetSkillC : UnityEngine.MonoBehaviour
     public Toggle C2;
     public Toggle C3;
     public Toggle C4;
+    public Image IconC;
     GameObject Soldier;
 
     // Use this for initialization
@@ -30,6 +31,7 @@ public class SetSkillC : UnityEngine.MonoBehaviour
         AllCOff();
         if (C3.isOn)
         {
+            Soldier.GetComponent<SkillC3>().MyImageScript = IconC.GetComponent<CooldownImage>();
             Soldier.GetComponent<SkillC3>().enabled = true;
             return;
         }
@@ -38,5 +40,6 @@ public class SetSkillC : UnityEngine.MonoBehaviour
     void AllCOff()
     {
         Soldier.GetComponent<SkillC3>().enabled = false;
+        Soldier.GetComponent<SkillC3>().MyImageScript = null;
     }
 }

@@ -5,7 +5,7 @@ using Photon;
 
 public class TestSkillLightning : Photon.MonoBehaviour
 {
-
+    public CooldownImage MyImageScript;
     public float maxdistance = 10;
     private float currentcooldown;
     public float cooldowntime = 3;
@@ -37,7 +37,10 @@ public class TestSkillLightning : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill(Vector2 actionplace)

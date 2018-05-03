@@ -12,6 +12,7 @@ public class SetSkillD : Photon.MonoBehaviour
     public Toggle D3;
     public Toggle D4;
     public Toggle D5;
+    public Image IconD;
     GameObject Soldier;
 
     // Use this for initialization
@@ -31,6 +32,7 @@ public class SetSkillD : Photon.MonoBehaviour
         AllDOff();
         if (D1.isOn)
         {
+            Soldier.GetComponent<TestSkillLightning>().MyImageScript = IconD.GetComponent<CooldownImage>();
             Soldier.GetComponent<TestSkillLightning>().enabled = true;
             return;
         }
@@ -39,5 +41,6 @@ public class SetSkillD : Photon.MonoBehaviour
     void AllDOff()
     {
         Soldier.GetComponent<TestSkillLightning>().enabled = false;
+        Soldier.GetComponent<TestSkillLightning>().MyImageScript = null;
     }
 }

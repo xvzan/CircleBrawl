@@ -15,6 +15,7 @@ public class SetSkillR : Photon.MonoBehaviour
     public Toggle R3;
     public Toggle R3a;
     public Toggle R3b;
+    public Image IconR;
     GameObject Soldier;
 
     // Use this for initialization
@@ -34,6 +35,7 @@ public class SetSkillR : Photon.MonoBehaviour
         AllROff();
         if (R1.isOn && R1a.isOn)
         {
+            Soldier.GetComponent<TestSkill02>().MyImageScript = IconR.GetComponent<CooldownImage>();
             Soldier.GetComponent<TestSkill02>().enabled = true;
             return;
         }
@@ -42,5 +44,6 @@ public class SetSkillR : Photon.MonoBehaviour
     void AllROff()
     {
         Soldier.GetComponent<TestSkill02>().enabled = false;
+        Soldier.GetComponent<TestSkill02>().MyImageScript = null;
     }
 }

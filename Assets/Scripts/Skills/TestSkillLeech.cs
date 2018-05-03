@@ -5,7 +5,7 @@ using Photon;
 
 public class TestSkillLeech : Photon.MonoBehaviour
 {
-
+    public CooldownImage MyImageScript;
     public float maxdistance;
     public float bulletspeed = 5;
     public GameObject leecher;
@@ -39,7 +39,10 @@ public class TestSkillLeech : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill(Vector2 actionplace)

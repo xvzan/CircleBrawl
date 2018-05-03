@@ -5,6 +5,7 @@ using Photon;
 
 public class SkillC3 : Photon.MonoBehaviour
 {
+    public CooldownImage MyImageScript;
     public GameObject ShadowCircle;
     GameObject MyShadow;
     private float currentcooldown;
@@ -53,6 +54,7 @@ public class SkillC3 : Photon.MonoBehaviour
             {
                 skillavaliable = true;
             }
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
         }
     }
 

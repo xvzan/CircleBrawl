@@ -5,7 +5,7 @@ using Photon;
 
 public class SelfExplodeScript : Photon.MonoBehaviour
 {
-    
+    public CooldownImage MyImageScript;
     private float currentcooldown;
     public float cooldowntime = 3;
     public bool skillavaliable;
@@ -26,7 +26,10 @@ public class SelfExplodeScript : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill()

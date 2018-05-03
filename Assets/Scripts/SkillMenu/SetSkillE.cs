@@ -19,6 +19,7 @@ public class SetSkillE : Photon.MonoBehaviour
     public Toggle E4;
     public Toggle E4a;
     public Toggle E4b;
+    public Image IconE;
     GameObject Soldier;
 
     // Use this for initialization
@@ -38,6 +39,7 @@ public class SetSkillE : Photon.MonoBehaviour
         AllEOff();
         if (E1.isOn && E1a.isOn)
         {
+            Soldier.GetComponent<SkillE1>().MyImageScript = IconE.GetComponent<CooldownImage>();
             Soldier.GetComponent<SkillE1>().enabled = true;
             return;
         }
@@ -46,5 +48,6 @@ public class SetSkillE : Photon.MonoBehaviour
     void AllEOff()
     {
         Soldier.GetComponent<SkillE1>().enabled = false;
+        Soldier.GetComponent<SkillE1>().MyImageScript = null;
     }
 }

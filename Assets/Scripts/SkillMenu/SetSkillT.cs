@@ -16,6 +16,7 @@ public class SetSkillT : Photon.MonoBehaviour
     public Toggle T3;
     public Toggle T3a;
     public Toggle T3b;
+    public Image IconT;
     GameObject Soldier;
 
     // Use this for initialization
@@ -35,11 +36,13 @@ public class SetSkillT : Photon.MonoBehaviour
         AllTOff();
         if (T1.isOn && T1a.isOn)
         {
+            Soldier.GetComponent<TestSkillLeech>().MyImageScript = IconT.GetComponent<CooldownImage>();
             Soldier.GetComponent<TestSkillLeech>().enabled = true;
             return;
         }
         if (T2.isOn && T2a.isOn)
         {
+            Soldier.GetComponent<SkillT2>().MyImageScript = IconT.GetComponent<CooldownImage>();
             Soldier.GetComponent<SkillT2>().enabled = true;
             return;
         }
@@ -48,6 +51,8 @@ public class SetSkillT : Photon.MonoBehaviour
     void AllTOff()
     {
         Soldier.GetComponent<TestSkillLeech>().enabled = false;
+        Soldier.GetComponent<TestSkillLeech>().MyImageScript = null;
         Soldier.GetComponent<SkillT2>().enabled = false;
+        Soldier.GetComponent<SkillT2>().MyImageScript = null;
     }
 }

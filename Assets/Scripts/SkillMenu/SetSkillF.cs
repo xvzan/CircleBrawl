@@ -8,6 +8,7 @@ public class SetSkillF : Photon.MonoBehaviour
 {
 
     public Toggle F1;
+    public Image IconF;
     GameObject Soldier;
 
     // Use this for initialization
@@ -27,6 +28,7 @@ public class SetSkillF : Photon.MonoBehaviour
         AllFOff();
         if (F1.isOn)
         {
+            Soldier.GetComponent<SelfExplodeScript>().MyImageScript = IconF.GetComponent<CooldownImage>();
             Soldier.GetComponent<TestSkill03>().enabled = true;
             Soldier.GetComponent<SelfExplodeScript>().enabled = true;
             return;
@@ -37,5 +39,6 @@ public class SetSkillF : Photon.MonoBehaviour
     {
         Soldier.GetComponent<TestSkill03>().enabled = false;
         Soldier.GetComponent<SelfExplodeScript>().enabled = false;
+        Soldier.GetComponent<SelfExplodeScript>().MyImageScript = null;
     }
 }

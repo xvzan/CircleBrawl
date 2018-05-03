@@ -5,7 +5,7 @@ using Photon;
 
 public class TestSkill01 : Photon.MonoBehaviour
 {
-
+    public CooldownImage MyImageScript;
     public float maxdistance;
     public float bulletspeed = 5;
     public GameObject fireball;
@@ -40,7 +40,10 @@ public class TestSkill01 : Photon.MonoBehaviour
             skillavaliable = true;
         }
         else
+        {
             currentcooldown += Time.fixedDeltaTime;
+            MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
     }
 
     public void Skill(Vector2 actionplace)
