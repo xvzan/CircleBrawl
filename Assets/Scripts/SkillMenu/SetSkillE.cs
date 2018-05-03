@@ -47,6 +47,7 @@ public class SetSkillE : Photon.MonoBehaviour
 
     void AllEOff()
     {
+        IconE.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<SkillE1>().enabled = false;
         Soldier.GetComponent<SkillE1>().MyImageScript = null;
     }

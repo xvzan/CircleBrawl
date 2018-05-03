@@ -50,6 +50,7 @@ public class SetSkillT : Photon.MonoBehaviour
 
     void AllTOff()
     {
+        IconT.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<TestSkillLeech>().enabled = false;
         Soldier.GetComponent<TestSkillLeech>().MyImageScript = null;
         Soldier.GetComponent<SkillT2>().enabled = false;

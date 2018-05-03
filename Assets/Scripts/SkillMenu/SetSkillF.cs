@@ -37,6 +37,7 @@ public class SetSkillF : Photon.MonoBehaviour
 
     void AllFOff()
     {
+        IconF.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<TestSkill03>().enabled = false;
         Soldier.GetComponent<SelfExplodeScript>().enabled = false;
         Soldier.GetComponent<SelfExplodeScript>().MyImageScript = null;

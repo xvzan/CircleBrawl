@@ -43,6 +43,7 @@ public class SetSkillR : Photon.MonoBehaviour
 
     void AllROff()
     {
+        IconR.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<TestSkill02>().enabled = false;
         Soldier.GetComponent<TestSkill02>().MyImageScript = null;
     }

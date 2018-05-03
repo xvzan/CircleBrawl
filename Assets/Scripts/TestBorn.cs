@@ -6,7 +6,7 @@ using Photon;
 public class TestBorn : Photon.MonoBehaviour
 {
 
-    float waittime = 15f;
+    float waittime = 10f;
     float diameter;
     float speed = 1f;
     GameObject safeground;
@@ -21,7 +21,7 @@ public class TestBorn : Photon.MonoBehaviour
         localPlayer.GetComponent<DoSkill>().enabled = true;
         localPlayer.GetComponent<MoveScript>().enabled = true;
         MyUI.GetComponent<SkillsLink>().alphaset();
-        localPlayer.transform.Find("Markicon").GetComponent<SpriteRenderer>().color = Color.red;
+        localPlayer.GetComponent<SpriteRenderer>().color = new Color32(0, 191, 0, 255);
         safeground = GameObject.Find("GroundCircle");
         diameter = safeground.transform.lossyScale.x;
         StartCoroutine(Changeradius());

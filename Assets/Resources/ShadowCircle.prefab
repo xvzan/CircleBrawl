@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 1024221403531666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0}
   m_Children: []
   m_Father: {fileID: 4528078247350270}
   m_RootOrder: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cebd513ffaba64e9451cbc589c91a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   cooldowntime: 3
   skillavaliable: 0
 --- !u!114 &114330390200916596
@@ -194,7 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3065bfa2e3adb5d478f01e8e11b5e8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   maxdistance: 10
+  cooldowntime: 3
   skillavaliable: 1
   line: {fileID: 0}
 --- !u!114 &114665424534697274
@@ -229,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95789ab00547204e8ee16ed52a680db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   maxdistance: 15
   bulletspeed: 5
   fireball: {fileID: 1197206318659480, guid: 12e895a9027336d4aadf9e33e68f976a, type: 2}
@@ -247,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d104ec09daaecba4b883605aaac2cb51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   TheRock: {fileID: 1226264735029378, guid: 49d3fa88c96ba09488526e24f62c6ca3, type: 2}
   maxdistance: 5
   damage: 10
@@ -264,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f54c09aa10f3a4f9d6d449e4558f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bar: {fileID: 0}
 --- !u!114 &114765754421338348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,6 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effb913bcedefa1419f6b222913e9acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   maxdistance: 13
   bulletspeed: 5
   leecher: {fileID: 1068041348700320, guid: 38d5b90ee1fae584ea23520643191810, type: 2}
@@ -303,7 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3cb61e72fa6b344995db54bc9fd45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
   maxdistance: 10
+  cooldowntime: 3
   skillavaliable: 0
 --- !u!212 &212660180604437332
 SpriteRenderer:
@@ -384,7 +393,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ce6acb5292df3354da5f015e7fd52cf7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -427,8 +436,8 @@ SpriteRenderer:
   m_SortingLayerID: 1036951093
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d8bcdd8fc53220469666433aa654d4a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.49803922}
+  m_Sprite: {fileID: 21300000, guid: ce6acb5292df3354da5f015e7fd52cf7, type: 3}
+  m_Color: {r: 0.66176474, g: 0.66176474, b: 0.66176474, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
