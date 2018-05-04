@@ -7,7 +7,7 @@ public class SkillT2 : Photon.MonoBehaviour
 {
     public CooldownImage MyImageScript;
     public float maxdistance;
-    public float bulletspeed = 5;
+    public float bulletspeed;
     public GameObject fireball;
     public int bulletamount;
     public float force;

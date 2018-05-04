@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e1f5a0ac96b104e92dbc6548a79257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxtime: 0
+  maxtime: 2
   bombpower: 15
   bombdamage: 10
   sender: {fileID: 0}

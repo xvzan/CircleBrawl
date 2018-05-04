@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 0
-  bulletspeed: 5
+  bulletspeed: 10
   fireball: {fileID: 1680992960079014, guid: 214613f7a65b89046a43deea823fea0b, type: 2}
   bulletamount: 7
   force: 0

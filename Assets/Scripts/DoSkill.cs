@@ -10,6 +10,7 @@ public class DoSkill : Photon.MonoBehaviour
     public PointSkill Fire;
     public delegate void NoPointSkill();
     public NoPointSkill ClearDebuff;
+    //public NoPointSkill WorkBeforeDestroy;
 
     // Use this for initialization
     void Start ()

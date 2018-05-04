@@ -16,7 +16,6 @@ public class BombExplode : Photon.MonoBehaviour
 	void Start () {
         selfprotect = true;
         pasttime = 0;
-        maxtime = 2;
 	}
 
     // Update is called once per frame
