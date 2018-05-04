@@ -1,2 +1,2 @@
 # CircleBrawl
-A Warlock-inspired 2D game made with Unity
+A Warlock-inspired multiplayer 2D game made with Unity and PUN
