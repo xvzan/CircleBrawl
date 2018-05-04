@@ -30,7 +30,7 @@ public class HPScript : Photon.MonoBehaviour
 		if(currentHP <= 0 && photonView.isMine)
         {
             gameObject.GetComponent<DoSkill>().DoClearJob();
-            //gameObject.GetComponent<DoSkill>().WorkBeforeDestroy();
+            gameObject.GetComponent<DoSkill>().DestroyClean();
             gameObject.GetComponent<DestroyScript>().Destroyself();
         }
         if(currentHP > maxHP && photonView.isMine)

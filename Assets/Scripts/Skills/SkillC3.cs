@@ -72,7 +72,7 @@ public class SkillC3 : Photon.MonoBehaviour
         currentcooldown = 0;
         skillavaliable = false;
         HaveShadow = true;
-        //gameObject.GetComponent<DoSkill>().WorkBeforeDestroy += DestroyMyShadow;
+        gameObject.GetComponent<DoSkill>().WorkBeforeDestroy += DestroyMyShadow;
     }
 
     void BackToShadow()
@@ -86,10 +86,11 @@ public class SkillC3 : Photon.MonoBehaviour
         }
         HaveShadow = false;
         GameObject.Destroy(MyShadow);
+        gameObject.GetComponent<DoSkill>().WorkBeforeDestroy -= DestroyMyShadow;
         gameObject.GetComponent<DoSkill>().DoClearJob();
     }
 
-    void OnDestroy()
+    public void DestroyMyShadow()
     {
         if (MyShadow == null)
             return;

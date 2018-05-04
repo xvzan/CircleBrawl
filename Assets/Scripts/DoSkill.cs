@@ -10,7 +10,7 @@ public class DoSkill : Photon.MonoBehaviour
     public PointSkill Fire;
     public delegate void NoPointSkill();
     public NoPointSkill ClearDebuff;
-    //public NoPointSkill WorkBeforeDestroy;
+    public NoPointSkill WorkBeforeDestroy;
 
     // Use this for initialization
     void Start ()
@@ -49,7 +49,17 @@ public class DoSkill : Photon.MonoBehaviour
 
     public void DoClearJob()
     {
+        if (ClearDebuff == null)
+            return;
         ClearDebuff();
         ClearDebuff = null;
+    }
+
+    public void DestroyClean()
+    {
+        if (WorkBeforeDestroy == null)
+            return;
+        WorkBeforeDestroy();
+        WorkBeforeDestroy = null;
     }
 }
