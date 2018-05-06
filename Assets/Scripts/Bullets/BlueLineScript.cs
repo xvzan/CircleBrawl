@@ -38,7 +38,7 @@ public class BlueLineScript : Photon.MonoBehaviour
         }
     }
 
-    public void DoMyJob(int idv,int ids,Vector2 place,float sp,float dm,float mt)
+    public void DoMyJob(int idv, int ids, Vector2 place, float sp, float dm, float mt)
     {
         photonView.RPC("BlueLineWorking", PhotonTargets.All, idv, ids, place, sp, dm, mt);
     }

@@ -61,7 +61,7 @@ public class TestSkillLightning : Photon.MonoBehaviour
             else if (hit2D.collider.GetComponent<RBScript>() != null)
             {
                 Vector2 kickdirection = hit2D.collider.GetComponent<Rigidbody2D>().position - realplace;
-                hit2D.collider.GetComponent<RBScript>().GetPushed(kickdirection * 20, 1);
+                hit2D.collider.GetComponent<RBScript>().GetPushed(kickdirection * 10, 2);
                 hit2D.collider.GetComponent<HPScript>().GetHurt(10);
             }
         }
