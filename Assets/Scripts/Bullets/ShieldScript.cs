@@ -38,4 +38,10 @@ public class ShieldScript : Photon.MonoBehaviour
         sender = PhotonView.Find(senderID).gameObject;
         maxtime = maxT;
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<DestroyScript>() != null && collision.GetComponent<DestroyScript>().breakable)
+            collision.GetComponent<DestroyScript>().Destroyself();
+    }
 }

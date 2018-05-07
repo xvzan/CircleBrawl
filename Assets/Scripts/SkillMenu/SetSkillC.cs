@@ -29,6 +29,12 @@ public class SetSkillC : UnityEngine.MonoBehaviour
         if (Soldier == null)
             Soldier = gameObject.GetComponent<SkillsLink>().mySoldier;
         AllCOff();
+        if (C2.isOn)
+        {
+            Soldier.GetComponent<SkillC2>().MyImageScript = IconC.GetComponent<CooldownImage>();
+            Soldier.GetComponent<SkillC2>().enabled = true;
+            return;
+        }
         if (C3.isOn)
         {
             Soldier.GetComponent<SkillC3>().MyImageScript = IconC.GetComponent<CooldownImage>();
@@ -40,6 +46,8 @@ public class SetSkillC : UnityEngine.MonoBehaviour
     void AllCOff()
     {
         IconC.GetComponent<CooldownImage>().IconFillAmount = 1;
+        Soldier.GetComponent<SkillC2>().enabled = false;
+        Soldier.GetComponent<SkillC2>().MyImageScript = null;
         Soldier.GetComponent<SkillC3>().enabled = false;
         Soldier.GetComponent<SkillC3>().MyImageScript = null;
     }

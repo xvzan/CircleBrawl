@@ -94,5 +94,4 @@ public class BlueLineScript : Photon.MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<DestroyScript>().SDestroy();
     }
-    
 }
