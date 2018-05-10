@@ -35,6 +35,8 @@ public class TestMenu02 : Photon.PunBehaviour
             setreadystatusonline();
             showpanel();
             Roomname.text = PhotonNetwork.room.Name;
+            if (PhotonNetwork.isMasterClient && !PhotonNetwork.room.IsOpen)
+                PhotonNetwork.room.IsOpen = true;
         }
     }
 
@@ -93,6 +95,7 @@ public class TestMenu02 : Photon.PunBehaviour
 
     public void ClickStartButton()
     {
+        PhotonNetwork.room.IsOpen = false;
         photonView.RPC("EnterCircleSence", PhotonTargets.All);
     }
 

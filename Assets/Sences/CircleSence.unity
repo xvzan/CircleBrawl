@@ -1163,7 +1163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Scourge
 --- !u!222 &62946165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3432,7 +3432,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillC2
+  m_Text: Shield
 --- !u!222 &217614087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11500,7 +11500,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Fire Spray
 --- !u!222 &710286177
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20941,7 +20941,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Link
 --- !u!222 &1224802493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22783,7 +22783,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillC3
+  m_Text: Time Shift
 --- !u!222 &1274941189
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27778,7 +27778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Fireball
 --- !u!222 &1589038822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28880,7 +28880,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Meteor
 --- !u!222 &1643183100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31414,7 +31414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Drain
 --- !u!222 &1813096416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31488,7 +31488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillD1
+  m_Text: Lightning
 --- !u!222 &1816456658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34651,7 +34651,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Bouncer
 --- !u!222 &2015220984
 CanvasRenderer:
   m_ObjectHideFlags: 0

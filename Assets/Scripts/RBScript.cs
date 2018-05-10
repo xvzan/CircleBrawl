@@ -63,4 +63,11 @@ public class RBScript : Photon.MonoBehaviour
     {
         return timetostop - timepassed;
     }
+
+    public void PushEnd()
+    {
+        MS.Givenvelocity = Vector2.zero;
+        MS.controllable = true;
+        //timepassed = timetostop;
+    }
 }

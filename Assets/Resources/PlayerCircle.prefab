@@ -58,6 +58,8 @@ GameObject:
   - component: {fileID: 58941196738858738}
   - component: {fileID: 114195414578748798}
   - component: {fileID: 114652884969489252}
+  - component: {fileID: 114453176934573388}
+  - component: {fileID: 114018559147139178}
   - component: {fileID: 114910228132107832}
   - component: {fileID: 114842419683896440}
   - component: {fileID: 114215185059955342}
@@ -74,6 +76,7 @@ GameObject:
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
+  - component: {fileID: 114669705318622220}
   - component: {fileID: 114191253232522832}
   - component: {fileID: 114423276684691626}
   - component: {fileID: 114730773768782418}
@@ -161,6 +164,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114018559147139178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25921729bc0d8f342b21da31d2971107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyMarkicon: {fileID: 1528763499456758}
+  MyHealthbar: {fileID: 1803222928252818}
+  BigSR: {fileID: 0}
+  ColorChangeTo: {r: 0, g: 0, b: 0, a: 0.49803922}
 --- !u!114 &114191253232522832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -377,6 +395,18 @@ MonoBehaviour:
   cooldowntime: 5
   skillavaliable: 1
   maxtime: 2
+--- !u!114 &114453176934573388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff7e01d58b667147b5ec33d2d9c517d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyCollider2D: {fileID: 58941196738858738}
 --- !u!114 &114482920916306366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -461,6 +491,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74667b115b17d4499a3a2d7f5c42bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114669705318622220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585b4e6679c77764cbf3f0871e6a262d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  SpeedR2: 20
+  maxdistance: 15
+  pushPower: 10
+  pushTime: 1
+  pushDamage: 7
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114672273343103500
 MonoBehaviour:
   m_ObjectHideFlags: 1
