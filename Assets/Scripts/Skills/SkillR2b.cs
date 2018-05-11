@@ -55,6 +55,7 @@ public class SkillR2b : Photon.MonoBehaviour
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         MS.controllable = true;
         currentcooldown = 0;
         skillavaliable = false;
