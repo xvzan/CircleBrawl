@@ -69,11 +69,13 @@ public class StealthScript : Photon.MonoBehaviour
         BigSR.color = ColorBefore;
     }
 
-    public void StealthByTime(float time)
+    public void StealthByTime(float time, bool DoLSDS)
     {
         currenttime = 0;
         maxtime = time;
         WindWalkByTime = true;
+        if (DoLSDS)
+            GetComponent<ColliderScript>().LSDSatAll();
         StealthStart();
     }
 
@@ -88,6 +90,7 @@ public class StealthScript : Photon.MonoBehaviour
         if (UCME == false)
             return;
         WindWalkByTime = false;
+        GetComponent<ColliderScript>().DSWLatAll();
         photonView.RPC("Appear", PhotonTargets.All);
         UCME = false;
     }

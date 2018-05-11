@@ -50,7 +50,7 @@ public class TestSkill02 : Photon.MonoBehaviour
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
         float realdistance = Mathf.Min(skilldirection.magnitude, maxdistance);
-        if (realdistance <= 0.6)
+        if (realdistance <= 0.51)
         {
             return;
         }   //半径小于自身半径时不施法

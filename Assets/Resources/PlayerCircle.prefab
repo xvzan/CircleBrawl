@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
   - component: {fileID: 114669705318622220}
+  - component: {fileID: 114546328487003428}
   - component: {fileID: 114191253232522832}
   - component: {fileID: 114423276684691626}
   - component: {fileID: 114730773768782418}
@@ -177,8 +178,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyMarkicon: {fileID: 1528763499456758}
   MyHealthbar: {fileID: 1803222928252818}
-  BigSR: {fileID: 0}
-  ColorChangeTo: {r: 0, g: 0, b: 0, a: 0.49803922}
+  BigSR: {fileID: 212906178296044240}
+  ColorChangeTo: {r: 0, g: 0, b: 1, a: 0.49803922}
 --- !u!114 &114191253232522832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -434,6 +435,21 @@ MonoBehaviour:
   maxdistance: 10
   cooldowntime: 3
   skillavaliable: 0
+--- !u!114 &114546328487003428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741c4608c8cc0b549b6a566ccf63130f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  cooldowntime: 5
+  skillavaliable: 1
+  LDspeed: 15
 --- !u!114 &114576861000568682
 MonoBehaviour:
   m_ObjectHideFlags: 1
