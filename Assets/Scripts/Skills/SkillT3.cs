@@ -48,6 +48,7 @@ public class SkillT3 : Photon.MonoBehaviour
     public void Skill(Vector2 actionplace)
     {
         gameObject.GetComponent<MoveScript>().stopwalking();
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
         DoFire(singplace + 0.81f * skilldirection.normalized, skilldirection.normalized * bulletspeed);

@@ -59,11 +59,12 @@ public class MoveScript : Photon.MonoBehaviour {
     void Update ()
     {
         if (Input.GetMouseButtonDown(1))
-       {
-        rightclickplace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        GameObject.Destroy(targeticon);
-        targeticon = Instantiate(targetshadow, rightclickplace, Quaternion.identity);
-        DoSkill.singing = 0;
+        {
+            rightclickplace = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            GameObject.Destroy(targeticon);
+            targeticon = Instantiate(targetshadow, rightclickplace, Quaternion.identity);
+            DoSkill.singing = 0;
+            GetComponent<SkillR2b>().IdoDSWL();
         }
 	}
 
@@ -93,6 +94,7 @@ public class MoveScript : Photon.MonoBehaviour {
     public void stopwalking()
     {
         GameObject.Destroy(targeticon);
+        GetComponent<SkillR2b>().IdoDSWL();
     }
     
     /*

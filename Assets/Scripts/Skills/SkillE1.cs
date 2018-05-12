@@ -49,6 +49,8 @@ public class SkillE1 : Photon.MonoBehaviour
     {
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
+        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         if (skilldirection.magnitude > maxdistance)
             actionplace = singplace + skilldirection.normalized * maxdistance;
         GameObject MyRock = PhotonNetwork.Instantiate(TheRock.name, actionplace, Quaternion.identity, 0);

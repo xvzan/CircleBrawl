@@ -46,6 +46,7 @@ public class TestSkill03 : Photon.MonoBehaviour
     public void Skill()
     {
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         DoSkill.singing = 3;
     }
 }

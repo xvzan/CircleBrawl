@@ -35,7 +35,8 @@ public class SelfExplodeScript : Photon.MonoBehaviour
     public void Skill()
     {
         //photonView.RPC("RealSkill", PhotonTargets.All);
-        gameObject.GetComponent<MoveScript>().stopwalking();
+        //gameObject.GetComponent<MoveScript>().stopwalking();
+        //gameObject.GetComponent<StealthScript>().StealthEnd();
         currentcooldown = 0;
         skillavaliable = false;
         float radius = 1.5f;

@@ -28,11 +28,6 @@ public class SkillR2b : Photon.MonoBehaviour
             DoSkill.singing = 0;
             gameObject.GetComponent<DoSkill>().Fire = Skill;
         }
-        if (Input.GetMouseButtonDown(1) && ImLSDS)
-        {
-            ImLSDS = false;
-            gameObject.GetComponent<StealthScript>().StealthEnd();
-        }
     }
 
     private void FixedUpdate()
@@ -47,6 +42,15 @@ public class SkillR2b : Photon.MonoBehaviour
         {
             currentcooldown += Time.fixedDeltaTime;
             MyImageScript.IconFillAmount = currentcooldown / cooldowntime;
+        }
+    }
+
+    public void IdoDSWL()
+    {
+        if (ImLSDS)
+        {
+            ImLSDS = false;
+            gameObject.GetComponent<StealthScript>().StealthEnd();
         }
     }
 

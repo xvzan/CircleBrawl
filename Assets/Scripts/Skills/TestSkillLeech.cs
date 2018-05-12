@@ -50,6 +50,7 @@ public class TestSkillLeech : Photon.MonoBehaviour
         //DoSkill.singing = 0;
         gameObject.GetComponent<DoSkill>().Fire = null;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         GameObject bullet;
         Vector2 skilldirection;
         Vector2 singplace = transform.position;

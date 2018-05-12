@@ -60,6 +60,7 @@ public class SkillR2 : Photon.MonoBehaviour
         else
         {
             gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+            gameObject.GetComponent<StealthScript>().StealthEnd();
             MS.controllable = true;
             currentcooldown = 0;
             skillavaliable = false;

@@ -52,6 +52,7 @@ public class SkillT2 : Photon.MonoBehaviour
         //DoSkill.singing = 0;
         //gameObject.GetComponent<DoSkill>().Fire = null;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         currentcooldown = 0;
         skillavaliable = false;
         Vector2 skilldirection = actionplace - gameObject.GetComponent<Rigidbody2D>().position;

@@ -50,6 +50,7 @@ public class SkillC2 : Photon.MonoBehaviour
     void Skill()
     {
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         currentcooldown = 0;
         skillavaliable = false;
         MyShield = PhotonNetwork.Instantiate(MyShieldObj.name, gameObject.transform.position, Quaternion.identity, 0);

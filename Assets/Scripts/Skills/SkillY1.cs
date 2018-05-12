@@ -61,6 +61,7 @@ public class SkillY1 : Photon.MonoBehaviour
         }   //半径小于自身半径时不施法
         Vector2 realplace = singplace + skilldirection.normalized * realdistance;
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         currentcooldown = 0;
         skillavaliable = false;
         if (Physics2D.OverlapPoint(realplace))
