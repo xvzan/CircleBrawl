@@ -50,6 +50,7 @@ public class ColliderScript : Photon.MonoBehaviour
     {
         CanDo = false;
         GetComponent<RBScript>().PushEnd();
+        GetComponent<StealthScript>().StealthEnd();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
