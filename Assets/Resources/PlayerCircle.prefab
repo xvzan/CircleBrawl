@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 114680706587732544}
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
+  - component: {fileID: 114618554307119934}
   - component: {fileID: 114669705318622220}
   - component: {fileID: 114546328487003428}
   - component: {fileID: 114191253232522832}
@@ -497,6 +498,24 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114618554307119934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9823149bd8cf44490e87f1cfbecc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 30
+  bulletspeed: 5
+  Missile: {fileID: 1453930264023322, guid: 2eb9a597cdd746349af1d04f2180eb89, type: 2}
+  damage: 10
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114652884969489252
 MonoBehaviour:
   m_ObjectHideFlags: 1
