@@ -42,7 +42,7 @@ public class HPScript : Photon.MonoBehaviour
     private void OnDestroy()
     {
         GameObject[] PlayersLeft = GameObject.FindGameObjectsWithTag("Player");
-        if (PlayersLeft.Length <= 1)
+        if (PhotonNetwork.isMasterClient && PlayersLeft.Length <= 1)
         {
             PhotonNetwork.LoadLevel("Sences/TestMenu");
         }

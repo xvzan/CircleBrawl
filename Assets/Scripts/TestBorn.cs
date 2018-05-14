@@ -15,6 +15,7 @@ public class TestBorn : Photon.MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        //PhotonNetwork.automaticallySyncScene = false;
         GameObject localPlayer = PhotonNetwork.Instantiate("PlayerCircle", Random.insideUnitCircle * 7, Quaternion.identity, 0);
         MyUI.GetComponent<SkillsLink>().mySoldier = localPlayer;
         MyUI.GetComponent<SkillsLink>().linktome();

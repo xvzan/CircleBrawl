@@ -13,6 +13,7 @@ public class TestPhoton : Photon.PunBehaviour {
     // Use this for initialization
     void Start ()
     {
+        PhotonNetwork.automaticallySyncScene = true;
         if (!PhotonNetwork.connected)
         {
             Menu01.SetActive(false);
@@ -24,6 +25,12 @@ public class TestPhoton : Photon.PunBehaviour {
             Menu00.SetActive(false);
             Menu01.SetActive(false);
             Menu02.SetActive(true);
+        }
+        else
+        {
+            Menu00.SetActive(false);
+            Menu01.SetActive(true);
+            Menu02.SetActive(false);
         }
     }
 }

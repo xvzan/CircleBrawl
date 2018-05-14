@@ -33,7 +33,7 @@ public class TestMenu00 : Photon.PunBehaviour
 
     public void ClickJoinLobbyButton()
     {
-        PhotonNetwork.ConnectUsingSettings("0.1.2");
+        PhotonNetwork.ConnectUsingSettings("0.1.3n");
         if (NickName.text == "")
             PhotonNetwork.player.NickName = "Player" + Random.Range(1, 9999);
         else
