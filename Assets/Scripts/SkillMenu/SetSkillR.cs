@@ -35,8 +35,8 @@ public class SetSkillR : Photon.MonoBehaviour
         AllROff();
         if (R1.isOn && R1a.isOn)
         {
-            Soldier.GetComponent<TestSkill02>().MyImageScript = IconR.GetComponent<CooldownImage>();
-            Soldier.GetComponent<TestSkill02>().enabled = true;
+            Soldier.GetComponent<SkillR1>().MyImageScript = IconR.GetComponent<CooldownImage>();
+            Soldier.GetComponent<SkillR1>().enabled = true;
             return;
         }
         if (R2.isOn && R2a.isOn)
@@ -51,16 +51,24 @@ public class SetSkillR : Photon.MonoBehaviour
             Soldier.GetComponent<SkillR2b>().enabled = true;
             return;
         }
+        if (R3.isOn && R3a.isOn)
+        {
+            Soldier.GetComponent<TestSkill02>().MyImageScript = IconR.GetComponent<CooldownImage>();
+            Soldier.GetComponent<TestSkill02>().enabled = true;
+            return;
+        }
     }
 
     void AllROff()
     {
         IconR.GetComponent<CooldownImage>().IconFillAmount = 1;
-        Soldier.GetComponent<TestSkill02>().enabled = false;
-        Soldier.GetComponent<TestSkill02>().MyImageScript = null;
+        Soldier.GetComponent<SkillR1>().enabled = false;
+        Soldier.GetComponent<SkillR1>().MyImageScript = null;
         Soldier.GetComponent<SkillR2>().enabled = false;
         Soldier.GetComponent<SkillR2>().MyImageScript = null;
         Soldier.GetComponent<SkillR2b>().enabled = false;
         Soldier.GetComponent<SkillR2b>().MyImageScript = null;
+        Soldier.GetComponent<TestSkill02>().enabled = false;
+        Soldier.GetComponent<TestSkill02>().MyImageScript = null;
     }
 }

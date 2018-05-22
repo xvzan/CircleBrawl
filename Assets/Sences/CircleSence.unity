@@ -1679,7 +1679,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Stream
 --- !u!222 &118546343
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3358,7 +3358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Displacement
 --- !u!222 &216133338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3575,7 +3575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Hook
 --- !u!222 &239318495
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9875,7 +9875,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Teleport
 --- !u!222 &602410754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10023,7 +10023,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Blink
 --- !u!222 &622594711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10361,7 +10361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Ghost
 --- !u!222 &654826935
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10778,7 +10778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Swap
 --- !u!222 &668604824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16692,7 +16692,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Meteorite
 --- !u!222 &993923862
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28542,7 +28542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Strike
 --- !u!222 &1632343346
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30777,7 +30777,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Slow
 --- !u!222 &1758117403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32040,7 +32040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Bounce
 --- !u!222 &1833821344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32257,7 +32257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Thrust
 --- !u!222 &1847873910
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34515,7 +34515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Charge
 --- !u!222 &2002089655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34737,7 +34737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Wind Walk
 --- !u!222 &2016564978
 CanvasRenderer:
   m_ObjectHideFlags: 0

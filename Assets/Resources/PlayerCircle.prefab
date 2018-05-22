@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 114842419683896440}
   - component: {fileID: 114215185059955342}
   - component: {fileID: 114271971038828940}
-  - component: {fileID: 114540715471846792}
   - component: {fileID: 114672273343103500}
   - component: {fileID: 114576861000568682}
   - component: {fileID: 114686709083244286}
@@ -78,8 +77,10 @@ GameObject:
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
   - component: {fileID: 114618554307119934}
+  - component: {fileID: 114884784777144854}
   - component: {fileID: 114669705318622220}
   - component: {fileID: 114546328487003428}
+  - component: {fileID: 114540715471846792}
   - component: {fileID: 114191253232522832}
   - component: {fileID: 114423276684691626}
   - component: {fileID: 114730773768782418}
@@ -289,30 +290,42 @@ MonoBehaviour:
     InterpolateSpeedCurve:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 2
+      - serializedVersion: 3
         time: -1
         value: 0
         inSlope: 0
         outSlope: Infinity
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 1
         value: 1
         inSlope: 0
         outSlope: 1
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4
         value: 4
         inSlope: 1
         outSlope: 0
         tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -436,7 +449,7 @@ MonoBehaviour:
   MyImageScript: {fileID: 0}
   maxdistance: 10
   cooldowntime: 3
-  skillavaliable: 0
+  skillavaliable: 1
 --- !u!114 &114546328487003428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -632,6 +645,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de9e0579a42d564d831603607c3199e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114884784777144854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4321f10972c0b44488595692e8f62f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 10
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114910228132107832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,6 +706,7 @@ LineRenderer:
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -708,12 +737,15 @@ LineRenderer:
     widthCurve:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 2
+      - serializedVersion: 3
         time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -766,6 +798,7 @@ LineRenderer:
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -796,18 +829,24 @@ LineRenderer:
     widthCurve:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 2
+      - serializedVersion: 3
         time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 1
         value: 0
         inSlope: -1.2435466
         outSlope: -1.2435466
         tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 0
@@ -860,6 +899,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -904,6 +944,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -948,6 +989,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
