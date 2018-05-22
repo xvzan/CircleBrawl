@@ -10,9 +10,23 @@ public class ShieldScript : Photon.MonoBehaviour
     float timepsd = 0;
 
     // Use this for initialization
-    void Start () {
-		
+    void Start ()
+    {
+        if (sender != null)
+        {
+            sender.GetComponent<Collider2D>().enabled = false;
+            sender.GetComponent<TestSkillLightning>().SelfR = 1.01f;
+        }
 	}
+
+    void OnDestroy()
+    {
+        if (sender != null)
+        {
+            sender.GetComponent<Collider2D>().enabled = true;
+            sender.GetComponent<TestSkillLightning>().SelfR = 0.51f;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -41,6 +55,11 @@ public class ShieldScript : Photon.MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.GetComponent<DestroyScript>() != null && collision.GetComponent<DestroyScript>().selfprotect)
+        {
+            collision.GetComponent<DestroyScript>().selfprotect = false;
+            return;
+        }
         if (collision.GetComponent<DestroyScript>() != null && collision.GetComponent<DestroyScript>().breakable)
             collision.GetComponent<DestroyScript>().Destroyself();
     }

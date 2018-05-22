@@ -6,6 +6,7 @@ using Photon;
 public class DestroyScript : Photon.MonoBehaviour
 {
     public bool breakable = false;
+    public bool selfprotect = true;
 
     public void Destroyself()
     {

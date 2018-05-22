@@ -11,11 +11,11 @@ public class BombExplode : Photon.MonoBehaviour
     public float bombpower;
     public float bombdamage;
     public GameObject sender;
-    private bool selfprotect;
+    //public bool selfprotect = true;
 
 	// Use this for initialization
 	void Start () {
-        selfprotect = true;
+        //selfprotect = true;
         pasttime = 0;
 	}
 
@@ -33,8 +33,10 @@ public class BombExplode : Photon.MonoBehaviour
     {
         if (!photonView.isMine)
             return;
-        if (collision.gameObject == sender && selfprotect)
+        if (gameObject.GetComponent<DestroyScript>().selfprotect && collision.gameObject == sender)
             return;
+        /*if (selfprotect && collision.gameObject.GetComponent<ShieldScript>().sender == sender)
+            return;*/
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
         HPScript hp = collision.gameObject.GetComponent<HPScript>();
         if (hp != null && rb != null)
@@ -51,6 +53,6 @@ public class BombExplode : Photon.MonoBehaviour
     
     private void OnCollisionExit2D(Collision2D collision)
     {
-        selfprotect = false;
+        gameObject.GetComponent<DestroyScript>().selfprotect = false;
     }
 }

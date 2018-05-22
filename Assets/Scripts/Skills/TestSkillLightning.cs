@@ -10,6 +10,7 @@ public class TestSkillLightning : Photon.MonoBehaviour
     private float currentcooldown;
     public float cooldowntime = 3;
     public bool skillavaliable;
+    public float SelfR = 0.51f;
     public LineRenderer line;
 
     // Use this for initialization
@@ -52,8 +53,8 @@ public class TestSkillLightning : Photon.MonoBehaviour
         gameObject.GetComponent<DoSkill>().Fire = null;
         Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
         Vector2 skilldirection = actionplace - selfrb2d.position;
-        RaycastHit2D hit2D = Physics2D.Raycast(selfrb2d.position + skilldirection.normalized, skilldirection - skilldirection.normalized);
-        if (hit2D.collider != null && hit2D.distance <= maxdistance - 0.51)
+        RaycastHit2D hit2D = Physics2D.Raycast(selfrb2d.position + skilldirection.normalized * SelfR, skilldirection - skilldirection.normalized * SelfR);
+        if (hit2D.collider != null && hit2D.distance <= maxdistance - SelfR)
         {
             realplace = hit2D.point;
             Drawline(realplace);

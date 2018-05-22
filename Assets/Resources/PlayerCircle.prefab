@@ -409,9 +409,9 @@ MonoBehaviour:
   MyShieldObj: {fileID: 1436927845370548, guid: b909350574ba82846a897b9f716219bf,
     type: 2}
   MyShield: {fileID: 0}
-  cooldowntime: 5
+  cooldowntime: 15
   skillavaliable: 1
-  maxtime: 2
+  maxtime: 10
 --- !u!114 &114453176934573388
 MonoBehaviour:
   m_ObjectHideFlags: 1
