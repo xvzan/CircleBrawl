@@ -50,7 +50,7 @@ public class SkillY2 : Photon.MonoBehaviour
         gameObject.GetComponent<StealthScript>().StealthEnd();
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
-        DoFire(singplace + 0.71f * skilldirection.normalized, skilldirection.normalized * bulletspeed);
+        DoFire(singplace + 0.66f * skilldirection.normalized, skilldirection.normalized * bulletspeed);
         currentcooldown = 0;
         skillavaliable = false;
     }

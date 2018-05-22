@@ -22,7 +22,7 @@ public class SkillC2 : Photon.MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("FireR") && skillavaliable)
+        if (Input.GetButtonDown("FireC") && skillavaliable)
         {
             DoSkill.singing = 0;
             Skill();
