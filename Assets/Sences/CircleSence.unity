@@ -9090,7 +9090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Entangle
 --- !u!222 &554858509
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30021,7 +30021,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Disable
 --- !u!222 &1714785343
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 114546328487003428}
   - component: {fileID: 114540715471846792}
   - component: {fileID: 114191253232522832}
+  - component: {fileID: 114680647777075134}
   - component: {fileID: 114423276684691626}
   - component: {fileID: 114730773768782418}
   - component: {fileID: 114985266391881892}
@@ -570,6 +571,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3139bb7893d0c3845bf7dcb2dcaf3c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114680647777075134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb7da875d3296b499affd82fbc6ca57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 15
+  bulletspeed: 10
+  DisBall: {fileID: 1243331948380450, guid: 65bbd73cc94e439438cb6d5685e90fc8, type: 2}
+  DisTime: 2
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114680706587732544
 MonoBehaviour:
   m_ObjectHideFlags: 1
