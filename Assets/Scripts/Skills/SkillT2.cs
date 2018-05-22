@@ -20,6 +20,7 @@ public class SkillT2 : Photon.MonoBehaviour
     void Start()
     {
         currentcooldown = cooldowntime;
+        fireball.GetComponent<BombExplode>().sender = gameObject;
     }
 
     // Update is called once per frame
@@ -65,7 +66,7 @@ public class SkillT2 : Photon.MonoBehaviour
         int bnum = 0;
         while (bnum < bulletamount)
         {
-            DoFire(gameObject.GetComponent<Rigidbody2D>().position + 0.6f * direction.normalized, direction.normalized * bulletspeed);
+            DoFire(gameObject.GetComponent<Rigidbody2D>().position + 0.5f * direction.normalized, direction.normalized * bulletspeed);
             direction = Quaternion.AngleAxis(-2, Vector3.forward) * direction;
             bnum++;
             yield return new WaitForSeconds(waittime);

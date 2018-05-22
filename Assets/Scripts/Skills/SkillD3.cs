@@ -56,7 +56,7 @@ public class SkillD3 : Photon.MonoBehaviour
             actionplace = SkillTarget.transform.position;
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
-        DoFire(singplace + 0.71f * skilldirection.normalized, skilldirection.normalized * bulletspeed, SkillTarget);
+        DoFire(singplace + 0.5f * skilldirection.normalized, skilldirection.normalized * bulletspeed, SkillTarget);
         currentcooldown = 0;
         skillavaliable = false;
     }

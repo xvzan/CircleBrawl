@@ -360,6 +360,7 @@ MonoBehaviour:
   maxdistance: 10
   cooldowntime: 3
   skillavaliable: 1
+  SelfR: 0.51
   line: {fileID: 120936783767746970}
 --- !u!114 &114382216967587364
 MonoBehaviour:
@@ -409,9 +410,9 @@ MonoBehaviour:
   MyShieldObj: {fileID: 1436927845370548, guid: b909350574ba82846a897b9f716219bf,
     type: 2}
   MyShield: {fileID: 0}
-  cooldowntime: 15
+  cooldowntime: 6
   skillavaliable: 1
-  maxtime: 10
+  maxtime: 2
 --- !u!114 &114453176934573388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -712,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakable: 0
+  selfprotect: 1
 --- !u!120 &120593926193960378
 LineRenderer:
   m_ObjectHideFlags: 1

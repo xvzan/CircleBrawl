@@ -10,7 +10,7 @@ public class LeechScript : Photon.MonoBehaviour
     public float leechdamage;
     //private Rigidbody2D selfrb;
     public GameObject sender;
-    private bool selfprotect;
+    //private bool selfprotect;
     public float turntime;
     public float speed;
     bool unturned = true;
@@ -19,7 +19,7 @@ public class LeechScript : Photon.MonoBehaviour
     void Start()
     {
         //selfrb = GetComponent<Rigidbody2D>();
-        selfprotect = true;
+        //selfprotect = true;
         pasttime = 0;
         maxtime = 2;
     }
@@ -44,7 +44,7 @@ public class LeechScript : Photon.MonoBehaviour
     {
         //if (!PhotonNetwork.isMasterClient)
             //return;
-        if (collision.gameObject == sender && selfprotect)
+        if (collision.gameObject == sender && gameObject.GetComponent<DestroyScript>().selfprotect)
             return;
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
         HPScript hp = collision.gameObject.GetComponent<HPScript>();
@@ -59,8 +59,8 @@ public class LeechScript : Photon.MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         //if (!PhotonNetwork.isMasterClient)
-            //return;
-        selfprotect = false;
+        //return;
+        gameObject.GetComponent<DestroyScript>().selfprotect = false;
     }
 
     GameObject FindClosestEnemy()
