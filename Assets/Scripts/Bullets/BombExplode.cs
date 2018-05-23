@@ -11,6 +11,7 @@ public class BombExplode : Photon.MonoBehaviour
     public float bombpower;
     public float bombdamage;
     public GameObject sender;
+    public bool selfbreak = true;
     //public bool selfprotect = true;
 
 	// Use this for initialization
@@ -48,7 +49,8 @@ public class BombExplode : Photon.MonoBehaviour
             //hp.GetKicked(explforce.normalized * bombpower);
             hp.GetHurt(bombdamage);
         }
-        gameObject.GetComponent<DestroyScript>().Destroyself();
+        if (selfbreak)
+            gameObject.GetComponent<DestroyScript>().Destroyself();
     }
     
     private void OnCollisionExit2D(Collision2D collision)

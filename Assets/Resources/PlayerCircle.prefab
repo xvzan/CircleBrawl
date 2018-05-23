@@ -69,13 +69,14 @@ GameObject:
   - component: {fileID: 114686709083244286}
   - component: {fileID: 114617714187311878}
   - component: {fileID: 114285432174419920}
-  - component: {fileID: 114312116052051252}
   - component: {fileID: 120936783767746970}
   - component: {fileID: 114482920916306366}
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114680706587732544}
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
+  - component: {fileID: 114312116052051252}
+  - component: {fileID: 114773886250041742}
   - component: {fileID: 114618554307119934}
   - component: {fileID: 114884784777144854}
   - component: {fileID: 114669705318622220}
@@ -654,6 +655,24 @@ MonoBehaviour:
   damage: 5
   cooldowntime: 3
   skillavaliable: 0
+--- !u!114 &114773886250041742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9eff3bffc70f443821f2337b6c4cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  bulletspeed: 5
+  fireball: {fileID: 1800137180570752, guid: 4aef57d96347bba4a88e627dce0b8359, type: 2}
+  force: 15
+  damage: 10
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114842419683896440
 MonoBehaviour:
   m_ObjectHideFlags: 1
