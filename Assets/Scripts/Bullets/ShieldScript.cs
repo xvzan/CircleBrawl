@@ -55,7 +55,7 @@ public class ShieldScript : Photon.MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.transform.position - transform.position).sqrMagnitude < 0.6)
+        if ((collision.transform.position - transform.position).sqrMagnitude < 0.8)
             return;
         if (collision.GetComponent<MoveScript>() != null)
         {
