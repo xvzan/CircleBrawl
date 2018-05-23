@@ -14,7 +14,7 @@ public class ShieldScript : Photon.MonoBehaviour
     {
         if (sender != null)
         {
-            sender.GetComponent<Collider2D>().enabled = false;
+            //sender.GetComponent<Collider2D>().enabled = false;
             sender.GetComponent<TestSkillLightning>().SelfR = 1.01f;
         }
 	}
@@ -23,7 +23,7 @@ public class ShieldScript : Photon.MonoBehaviour
     {
         if (sender != null)
         {
-            sender.GetComponent<Collider2D>().enabled = true;
+            //sender.GetComponent<Collider2D>().enabled = true;
             sender.GetComponent<TestSkillLightning>().SelfR = 0.51f;
         }
     }
@@ -55,12 +55,22 @@ public class ShieldScript : Photon.MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<DestroyScript>() != null && collision.GetComponent<DestroyScript>().selfprotect)
+        if ((collision.transform.position - transform.position).sqrMagnitude < 0.6)
+            return;
+        if (collision.GetComponent<MoveScript>() != null)
         {
-            collision.GetComponent<DestroyScript>().selfprotect = false;
+            Vector2 sp = collision.GetComponent<MoveScript>().Givenvelocity;
+            Vector2 vp = transform.position - collision.transform.position;
+            float angel12 = Vector2.Angle(sp, vp);
+            collision.GetComponent<MoveScript>().Givenvelocity = Quaternion.AngleAxis(180 - angel12 * 2, Vector3.Cross(vp, sp)) * sp;
             return;
         }
-        if (collision.GetComponent<DestroyScript>() != null && collision.GetComponent<DestroyScript>().breakable)
-            collision.GetComponent<DestroyScript>().Destroyself();
+        if (collision.GetComponent<Rigidbody2D>() != null)
+        {
+            Vector2 sp = collision.GetComponent<Rigidbody2D>().velocity;
+            Vector2 vp = transform.position - collision.transform.position;
+            float angel12 = Vector2.Angle(sp, vp);
+            collision.GetComponent<Rigidbody2D>().velocity = Quaternion.AngleAxis(180 - angel12 * 2, Vector3.Cross(vp, sp)) * sp;
+        }
     }
 }

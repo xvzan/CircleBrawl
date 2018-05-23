@@ -388,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 0
-  bulletspeed: 10
+  bulletspeed: 9
   fireball: {fileID: 1680992960079014, guid: 214613f7a65b89046a43deea823fea0b, type: 2}
   bulletamount: 7
   force: 0
@@ -412,7 +412,7 @@ MonoBehaviour:
   MyShield: {fileID: 0}
   cooldowntime: 6
   skillavaliable: 1
-  maxtime: 2
+  maxtime: 20
 --- !u!114 &114453176934573388
 MonoBehaviour:
   m_ObjectHideFlags: 1
