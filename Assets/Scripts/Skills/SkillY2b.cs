@@ -7,12 +7,12 @@ public class SkillY2b : Photon.MonoBehaviour
 {
     public CooldownImage MyImageScript;
     public GameObject MySuiteObj;
-    public GameObject MySuite;
+    //public GameObject MySuite;
     public float maxdistance = 10;
     private float currentcooldown;
     public float cooldowntime = 3;
     public bool skillavaliable;
-    public float maxtime;
+    //public float maxtime;
 
     // Use this for initialization
     void Start()
@@ -60,5 +60,7 @@ public class SkillY2b : Photon.MonoBehaviour
             return;
         }   //半径小于自身半径时不施法
         Vector2 Suiteplace = singplace - skilldirection.normalized * 2;
+        GameObject MySuite = PhotonNetwork.Instantiate(MySuiteObj.name, Suiteplace, Quaternion.identity, 0);
+        MySuite.GetComponent<SilenceSuiteScript>().work(skilldirection.normalized * realdistance);
     }
 }
