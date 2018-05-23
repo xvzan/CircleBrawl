@@ -412,7 +412,7 @@ MonoBehaviour:
   MyShield: {fileID: 0}
   cooldowntime: 6
   skillavaliable: 1
-  maxtime: 20
+  maxtime: 2
 --- !u!114 &114453176934573388
 MonoBehaviour:
   m_ObjectHideFlags: 1

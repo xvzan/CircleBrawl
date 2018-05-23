@@ -10,6 +10,7 @@ public class ShieldScript : Photon.MonoBehaviour
     float timepsd = 0;
 
     // Use this for initialization
+    /*
     void Start ()
     {
         if (sender != null)
@@ -26,7 +27,7 @@ public class ShieldScript : Photon.MonoBehaviour
             //sender.GetComponent<Collider2D>().enabled = true;
             sender.GetComponent<TestSkillLightning>().SelfR = 0.51f;
         }
-    }
+    }*/
 	
 	// Update is called once per frame
 	void Update ()

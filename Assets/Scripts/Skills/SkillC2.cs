@@ -52,6 +52,7 @@ public class SkillC2 : Photon.MonoBehaviour
         skillavaliable = false;
         MyShieldObj.GetComponent<ShieldScript>().sender = gameObject;
         MyShield = PhotonNetwork.Instantiate(MyShieldObj.name, gameObject.transform.position, Quaternion.identity, 0);
+        MyShield.layer = 2;
         MyShield.GetComponent<ShieldScript>().SetConf(gameObject.GetPhotonView().viewID, maxtime);
         gameObject.GetComponent<DoSkill>().DoClearJob();
     }
