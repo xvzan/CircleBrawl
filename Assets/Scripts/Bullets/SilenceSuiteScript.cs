@@ -30,6 +30,8 @@ public class SilenceSuiteScript : Photon.MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!photonView.isMine)
+            return;
         timepsd += Time.fixedDeltaTime;
         if (timepsd >= maxtime)
         {
@@ -54,7 +56,21 @@ public class SilenceSuiteScript : Photon.MonoBehaviour
     {
         cA.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         cB.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        LRR.SetPosition(0, cA.GetComponent<Rigidbody2D>().position);
-        LRR.SetPosition(1, cB.GetComponent<Rigidbody2D>().position);
+        photonView.RPC("SSLine", PhotonTargets.All, cA.GetComponent<Rigidbody2D>().position, cB.GetComponent<Rigidbody2D>().position);
+        Vector2 RayV2 = cB.GetComponent<Rigidbody2D>().position - cA.GetComponent<Rigidbody2D>().position;
+        RaycastHit2D[] Allhit = Physics2D.RaycastAll(cA.GetComponent<Rigidbody2D>().position, RayV2);
+        foreach (RaycastHit2D hit in Allhit)
+        {
+            //
+        }
+        cA.GetComponent<DestroyScript>().Destroyself();
+        cB.GetComponent<DestroyScript>().Destroyself();
+    }
+
+    [PunRPC]
+    void SSLine(Vector2 a, Vector2 b)
+    {
+        LRR.SetPosition(0, a);
+        LRR.SetPosition(1, b);
     }
 }

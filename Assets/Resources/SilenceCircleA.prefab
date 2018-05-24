@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114272916137900120}
   - component: {fileID: 114793521015644066}
   - component: {fileID: 114341648053903120}
+  - component: {fileID: 114360510037660248}
   m_Layer: 0
   m_Name: SilenceCircleA
   m_TagString: Untagged
@@ -104,6 +105,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114360510037660248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493169413347674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8201d6de9ff9d542b781c883e47794e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakable: 0
+  selfprotect: 1
 --- !u!114 &114793521015644066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +132,7 @@ MonoBehaviour:
   m_PositionModel:
     SynchronizeEnabled: 1
     TeleportEnabled: 1
-    TeleportIfDistanceGreaterThan: 3
+    TeleportIfDistanceGreaterThan: 0.5
     InterpolateOption: 2
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 1

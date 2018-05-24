@@ -59,6 +59,8 @@ public class SkillY2b : Photon.MonoBehaviour
         {
             return;
         }   //半径小于自身半径时不施法
+        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
         Vector2 Suiteplace = singplace - skilldirection.normalized * 2;
         GameObject MySuite = PhotonNetwork.Instantiate(MySuiteObj.name, Suiteplace, Quaternion.identity, 0);
         MySuite.GetComponent<SilenceSuiteScript>().work(skilldirection.normalized * realdistance);
