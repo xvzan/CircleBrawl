@@ -72,5 +72,12 @@ public class SilenceSuiteScript : Photon.MonoBehaviour
     {
         LRR.SetPosition(0, a);
         LRR.SetPosition(1, b);
+        StartCoroutine(byebye());
+    }
+
+    IEnumerator byebye()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetComponent<DestroyScript>().Destroyself();
     }
 }

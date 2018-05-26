@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 120790053380503692}
   - component: {fileID: 114976254263692422}
   - component: {fileID: 114869205182400350}
+  - component: {fileID: 114437379936866524}
   m_Layer: 0
   m_Name: SilenceSuite
   m_TagString: Untagged
@@ -42,6 +43,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114437379936866524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1758492616619336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8201d6de9ff9d542b781c883e47794e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakable: 0
+  selfprotect: 0
 --- !u!114 &114869205182400350
 MonoBehaviour:
   m_ObjectHideFlags: 1
