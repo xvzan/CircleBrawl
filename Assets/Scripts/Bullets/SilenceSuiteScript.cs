@@ -63,7 +63,7 @@ public class SilenceSuiteScript : Photon.MonoBehaviour
         {
             if (hit.collider.GetComponent<LinktoUI>() == null)
                 continue;
-            hit.collider.GetComponent<LinktoUI>().SSUP();
+            hit.collider.GetComponent<LinktoUI>().ShutUp();
         }
         cA.GetComponent<DestroyScript>().Destroyself();
         cB.GetComponent<DestroyScript>().Destroyself();
