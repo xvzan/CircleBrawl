@@ -34,7 +34,7 @@ public class SetSkillG : Photon.MonoBehaviour
         }
     }
 
-    void AllGOff()
+    public void AllGOff()
     {
         IconG.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<TestSkill01>().enabled = false;

@@ -50,7 +50,7 @@ public class SetSkillD : Photon.MonoBehaviour
         }
     }
 
-    void AllDOff()
+    public void AllDOff()
     {
         IconD.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<TestSkillLightning>().enabled = false;

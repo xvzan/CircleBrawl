@@ -59,7 +59,7 @@ public class SetSkillR : Photon.MonoBehaviour
         }
     }
 
-    void AllROff()
+    public void AllROff()
     {
         IconR.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<SkillR1>().enabled = false;

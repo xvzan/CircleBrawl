@@ -61,7 +61,9 @@ public class SilenceSuiteScript : Photon.MonoBehaviour
         RaycastHit2D[] Allhit = Physics2D.RaycastAll(cA.GetComponent<Rigidbody2D>().position, RayV2);
         foreach (RaycastHit2D hit in Allhit)
         {
-            //
+            if (hit.collider.GetComponent<LinktoUI>() == null)
+                continue;
+            hit.collider.GetComponent<LinktoUI>().SSUP();
         }
         cA.GetComponent<DestroyScript>().Destroyself();
         cB.GetComponent<DestroyScript>().Destroyself();

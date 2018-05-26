@@ -43,7 +43,7 @@ public class SetSkillC : UnityEngine.MonoBehaviour
         }
     }
 
-    void AllCOff()
+    public void AllCOff()
     {
         IconC.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<SkillC2>().enabled = false;
