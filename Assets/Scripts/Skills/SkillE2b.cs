@@ -63,6 +63,7 @@ public class SkillE2b : Photon.MonoBehaviour
         MS.controllable = true;
         currentcooldown = 0;
         skillavaliable = false;
+        working = true;
         mywork();
     }
 
@@ -72,19 +73,36 @@ public class SkillE2b : Photon.MonoBehaviour
         gameObject.GetComponent<ColliderScript>().StartKick(maxTimeE2);
         gameObject.GetComponent<StealthScript>().StealthByTime(maxTimeE2, false);
         worktime = 0;
-        working = true;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!collision.gameObject.CompareTag("Player"))
+            working = false;
         if (!working)
             return;
+        working = true;
         StartCoroutine(rework());
     }
 
     IEnumerator rework()
     {
-        yield return new WaitForSeconds(0.2f);
-        mywork();
+        if (working)
+        {
+            yield return new WaitForSeconds(0.2f);
+            mywork();
+        }
+    }
+
+    public void lighthit()
+    {
+        photonView.RPC("lightninghit", PhotonTargets.All);
+    }
+
+    [PunRPC]
+    void lightninghit()
+    {
+        working = false;
+        GetComponent<ColliderScript>().StopKick();
     }
 }
