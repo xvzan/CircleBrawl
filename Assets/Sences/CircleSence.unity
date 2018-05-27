@@ -27132,7 +27132,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Invisibility
 --- !u!222 &1537809817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27428,7 +27428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Multiport
 --- !u!222 &1564401148
 CanvasRenderer:
   m_ObjectHideFlags: 0

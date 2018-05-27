@@ -73,12 +73,14 @@ GameObject:
   - component: {fileID: 114482920916306366}
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114680706587732544}
+  - component: {fileID: 114709579917456588}
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
   - component: {fileID: 114312116052051252}
   - component: {fileID: 114773886250041742}
   - component: {fileID: 114618554307119934}
   - component: {fileID: 114884784777144854}
+  - component: {fileID: 114508862432649272}
   - component: {fileID: 114669705318622220}
   - component: {fileID: 114546328487003428}
   - component: {fileID: 114540715471846792}
@@ -439,6 +441,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyUI: {fileID: 0}
+--- !u!114 &114508862432649272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17cdf6f598f923544ba9825e8a193e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 5
+  cooldowntime: 6
+  skillavaliable: 1
+  scdtime: 2
 --- !u!114 &114540715471846792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -604,11 +622,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
-  maxTimeE2: 3
-  pushPower: 5
+  maxTimeE2: 5
+  pushPower: 10
   pushTime: 0.5
   pushDamage: 3
-  cooldowntime: 5
+  cooldowntime: 7
   skillavaliable: 1
 --- !u!114 &114686709083244286
 MonoBehaviour:
@@ -637,6 +655,24 @@ MonoBehaviour:
   MySuiteObj: {fileID: 1758492616619336, guid: 3a4f648ffaa050d4f9987fa2068f0aaa, type: 2}
   maxdistance: 10
   cooldowntime: 3
+  skillavaliable: 1
+--- !u!114 &114709579917456588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39adc1a27fb8fbe4580aad2ed75546ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxTimeE2: 4
+  pushPower: 5
+  pushTime: 0.5
+  pushDamage: 2
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114719163519757270
 MonoBehaviour:

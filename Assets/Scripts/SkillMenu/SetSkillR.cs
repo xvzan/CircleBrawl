@@ -39,6 +39,12 @@ public class SetSkillR : Photon.MonoBehaviour
             Soldier.GetComponent<SkillR1>().enabled = true;
             return;
         }
+        if (R1.isOn && R1b.isOn)
+        {
+            Soldier.GetComponent<SkillR1b>().MyImageScript = IconR.GetComponent<CooldownImage>();
+            Soldier.GetComponent<SkillR1b>().enabled = true;
+            return;
+        }
         if (R2.isOn && R2a.isOn)
         {
             Soldier.GetComponent<SkillR2>().MyImageScript = IconR.GetComponent<CooldownImage>();
@@ -64,6 +70,8 @@ public class SetSkillR : Photon.MonoBehaviour
         IconR.GetComponent<CooldownImage>().IconFillAmount = 1;
         Soldier.GetComponent<SkillR1>().enabled = false;
         Soldier.GetComponent<SkillR1>().MyImageScript = null;
+        Soldier.GetComponent<SkillR1b>().enabled = false;
+        Soldier.GetComponent<SkillR1b>().MyImageScript = null;
         Soldier.GetComponent<SkillR2>().enabled = false;
         Soldier.GetComponent<SkillR2>().MyImageScript = null;
         Soldier.GetComponent<SkillR2b>().enabled = false;
