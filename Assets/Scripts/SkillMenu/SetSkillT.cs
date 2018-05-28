@@ -46,6 +46,12 @@ public class SetSkillT : Photon.MonoBehaviour
             Soldier.GetComponent<SkillT2>().enabled = true;
             return;
         }
+        if (T2.isOn && T2b.isOn)
+        {
+            Soldier.GetComponent<SkillT2b>().MyImageScript = IconT.GetComponent<CooldownImage>();
+            Soldier.GetComponent<SkillT2b>().enabled = true;
+            return;
+        }
         if (T3.isOn && T3a.isOn)
         {
             Soldier.GetComponent<SkillT3>().MyImageScript = IconT.GetComponent<CooldownImage>();
@@ -61,6 +67,8 @@ public class SetSkillT : Photon.MonoBehaviour
         Soldier.GetComponent<TestSkillLeech>().MyImageScript = null;
         Soldier.GetComponent<SkillT2>().enabled = false;
         Soldier.GetComponent<SkillT2>().MyImageScript = null;
+        Soldier.GetComponent<SkillT2b>().enabled = false;
+        Soldier.GetComponent<SkillT2b>().MyImageScript = null;
         Soldier.GetComponent<SkillT3>().enabled = false;
         Soldier.GetComponent<SkillT3>().MyImageScript = null;
     }

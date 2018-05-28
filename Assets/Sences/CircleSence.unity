@@ -36345,7 +36345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Cluster
 --- !u!222 &2097109696
 CanvasRenderer:
   m_ObjectHideFlags: 0
