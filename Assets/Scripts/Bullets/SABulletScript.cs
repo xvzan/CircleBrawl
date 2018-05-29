@@ -7,7 +7,7 @@ public class SABulletScript : Photon.MonoBehaviour
 {
 
     public GameObject sender;
-    public Rigidbody2D bulletRB2D;
+    //public Rigidbody2D bulletRB2D;
     public float Damage = 2;
     float currenttime = 0;
     public float maxtime = 2;

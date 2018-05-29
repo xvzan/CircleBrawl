@@ -78,6 +78,8 @@ GameObject:
   - component: {fileID: 114281299735048176}
   - component: {fileID: 114680706587732544}
   - component: {fileID: 114709579917456588}
+  - component: {fileID: 114750286348339094}
+  - component: {fileID: 114957782291696940}
   - component: {fileID: 114884784777144854}
   - component: {fileID: 114508862432649272}
   - component: {fileID: 114669705318622220}
@@ -729,6 +731,24 @@ MonoBehaviour:
   damage: 5
   cooldowntime: 3
   skillavaliable: 0
+--- !u!114 &114750286348339094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54d188c23e39cc41920c37363691cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 15
+  maxtime: 2
+  ST: {fileID: 1841121462876242, guid: f87d6d32eb970454faa6d3424ca644ed, type: 2}
+  damage: 3
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114773886250041742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -794,6 +814,24 @@ MonoBehaviour:
   selfvelocity: {x: 0, y: 0}
   PlayerRb2d: {fileID: 50066458329441964}
   targeticon: {fileID: 0}
+--- !u!114 &114957782291696940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12ddac550bd4664ca424a2113d94537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxdistance: 15
+  maxtime: 3
+  SA: {fileID: 1796281269702032, guid: 2a7c97ed457ecb245a49ebbf0413c90e, type: 2}
+  damage: 3
+  cooldowntime: 3
+  skillavaliable: 1
 --- !u!114 &114985266391881892
 MonoBehaviour:
   m_ObjectHideFlags: 1

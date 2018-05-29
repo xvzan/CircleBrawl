@@ -330,7 +330,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillName
+  m_Text: Splitter
 --- !u!222 &12946685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6281,7 +6281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode1
+  m_Text: Target
 --- !u!222 &408514171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28616,7 +28616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Area
 --- !u!222 &1633765886
 CanvasRenderer:
   m_ObjectHideFlags: 0
