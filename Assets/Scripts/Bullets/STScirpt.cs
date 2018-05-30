@@ -38,6 +38,8 @@ public class STScirpt : Photon.MonoBehaviour
 
     private void OnDestroy()
     {
+        if (!photonView.isMine)
+            return;
         FFF(finalv);
     }
 

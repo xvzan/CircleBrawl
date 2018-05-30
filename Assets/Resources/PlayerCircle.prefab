@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 114423276684691626}
   - component: {fileID: 114616891319659198}
   - component: {fileID: 114730773768782418}
+  - component: {fileID: 114441926689906800}
   - component: {fileID: 114191253232522832}
   - component: {fileID: 114680647777075134}
   - component: {fileID: 114697688607761396}
@@ -420,6 +421,24 @@ MonoBehaviour:
   damage: 0
   cooldowntime: 3
   skillavaliable: 0
+--- !u!114 &114441926689906800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d379df6ea7fbf489b18bc53f86a2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  bulletspeed: 15
+  fireball: {fileID: 1695034717852674, guid: 962dfba847a131a4e9f22a1bb5b4b158, type: 2}
+  damage: 5
+  cooldowntime: 10
+  skillavaliable: 1
+  damageplus: 0
 --- !u!114 &114448691188997236
 MonoBehaviour:
   m_ObjectHideFlags: 1
