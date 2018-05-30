@@ -30,7 +30,12 @@ public class STScirpt : Photon.MonoBehaviour
             return;
         gameObject.GetComponent<DestroyScript>().Destroyself();
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        finalv = gameObject.GetComponent<Rigidbody2D>().velocity;
+    }
+
     private void OnDestroy()
     {
         FFF(finalv);

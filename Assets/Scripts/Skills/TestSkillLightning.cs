@@ -50,6 +50,8 @@ public class TestSkillLightning : Photon.MonoBehaviour
         //DoSkill.singing = 0; //停止吟唱中技能
         gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
         gameObject.GetComponent<StealthScript>().StealthEnd();
+        currentcooldown = 0;
+        skillavaliable = false;
         gameObject.GetComponent<DoSkill>().Fire = null;
         Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
         Vector2 skilldirection = actionplace - selfrb2d.position;
@@ -60,6 +62,12 @@ public class TestSkillLightning : Photon.MonoBehaviour
             Drawline(realplace);
             if (hit2D.collider.GetComponent<DestroyScript>() != null && hit2D.collider.GetComponent<DestroyScript>().breakable == true)
                 hit2D.collider.GetComponent<DestroyScript>().Destroyself();
+            else if (hit2D.collider.GetComponent<RollScript>() != null)
+            {
+                if (!hit2D.collider.GetComponent<PhotonView>().isMine)
+                    hit2D.collider.GetComponent<DestroyScript>().Destroyself();
+                return;
+            }
             else if (hit2D.collider.GetComponent<RBScript>() != null)
             {
                 Vector2 kickdirection = hit2D.collider.GetComponent<Rigidbody2D>().position - realplace;
@@ -73,8 +81,6 @@ public class TestSkillLightning : Photon.MonoBehaviour
             realplace = selfrb2d.position + maxdistance * skilldirection.normalized;
             Drawline(realplace);
         }
-        currentcooldown = 0;
-        skillavaliable = false;
     }
 
     void Drawline(Vector2 destn)

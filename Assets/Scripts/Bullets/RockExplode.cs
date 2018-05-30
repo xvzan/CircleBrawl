@@ -7,6 +7,7 @@ public class RockExplode : Photon.MonoBehaviour
 {
     public float damage = 10;
     public float bombforce = 18;
+    public float pushtime = 1;
     private float timetosing = 2;
     private float timesinged = 0;
 
@@ -26,10 +27,11 @@ public class RockExplode : Photon.MonoBehaviour
 
     public void Skill()
     {
-        photonView.RPC("RealSkill", PhotonTargets.All);
+        //photonView.RPC("RealSkill", PhotonTargets.All);
+        GetComponent<DestroyScript>().Destroyself();
     }
 
-    [PunRPC]
+    //[PunRPC]
     public void RealSkill()
     {
         //gameObject.GetComponent<MoveScript>().stopwalking();
@@ -47,10 +49,14 @@ public class RockExplode : Photon.MonoBehaviour
                 {
                     Vector2 explforce;
                     explforce = rb.position - actionplace;
-                    hit.GetComponent<RBScript>().GetPushed(explforce.normalized * bombforce, 1f);
+                    hit.GetComponent<RBScript>().GetPushed(explforce.normalized * bombforce, pushtime);
                 }
             }
         }
-        GameObject.Destroy(this.gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        RealSkill();
     }
 }

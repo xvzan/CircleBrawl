@@ -5,7 +5,7 @@ using Photon;
 
 public class CentrallyConstentField : Photon.MonoBehaviour
 {
-    Rigidbody2D center;
+    public Rigidbody2D center;
     public float speed;
 
     public void AddConstentCentrallyVelocity(Rigidbody2D victim,MoveScript worker)
@@ -15,11 +15,6 @@ public class CentrallyConstentField : Photon.MonoBehaviour
             return;
         worker.VelotoAdd += (center.position - victim.position).normalized * speed;
     }
-    
-    // Use this for initialization
-    void Start () {
-        center = GetComponent<Rigidbody2D>();
-	}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,9 +28,14 @@ public class CentrallyConstentField : Photon.MonoBehaviour
         MS.cook -= AddConstentCentrallyVelocity;
     }
 
-    // Update is called once per frame
-    void Update ()
+    public void setspeed(float spd)
     {
+        photonView.RPC("speedset", PhotonTargets.All, spd);
+    }
 
-	}
+    [PunRPC]
+    void speedset(float s)
+    {
+        speed = s;
+    }
 }
