@@ -9,11 +9,13 @@ public class HPScript : Photon.MonoBehaviour
     public float currentHP;
     private GameObject safeground;
     float outhurt = 2;
+    bool boost = false;
 
     // Use this for initialization
     void Start () {
         currentHP = maxHP;
         safeground = GameObject.Find("GroundCircle");
+        boost = false;
 	}
 
     // Update is called once per frame
@@ -69,6 +71,10 @@ public class HPScript : Photon.MonoBehaviour
     void DoGetHurt(float damage)
     {
         currentHP -= damage;
+        if (boost)
+        {
+            currentHP += damage / 2;
+        }
     }
 
     /*
