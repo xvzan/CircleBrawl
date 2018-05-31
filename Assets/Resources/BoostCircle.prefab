@@ -20,10 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4475794463665334}
   - component: {fileID: 212654335431697674}
-  - component: {fileID: 58450841146753440}
-  - component: {fileID: 114390165755800120}
   - component: {fileID: 114090655768953242}
   - component: {fileID: 114676937199174500}
+  - component: {fileID: 114814992285572682}
   m_Layer: 0
   m_Name: BoostCircle
   m_TagString: Untagged
@@ -44,21 +43,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58450841146753440
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636168411065404}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &114090655768953242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,19 +56,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakable: 0
   selfprotect: 1
---- !u!114 &114390165755800120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1636168411065404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58953ee860298a144bcdc8b87bee968b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sender: {fileID: 0}
-  maxtime: 2
 --- !u!114 &114676937199174500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +82,19 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114814992285572682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1636168411065404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c94217a2540a5a42a6e8c1d34e1095f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sender: {fileID: 0}
+  maxtime: 2
 --- !u!212 &212654335431697674
 SpriteRenderer:
   m_ObjectHideFlags: 1
