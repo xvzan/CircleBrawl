@@ -10,6 +10,8 @@ public class HPScript : Photon.MonoBehaviour
     private GameObject safeground;
     float outhurt = 2;
     bool boost = false;
+    public float boostnow = 0;
+    public float boostmax = 25;
 
     // Use this for initialization
     void Start () {
@@ -73,8 +75,24 @@ public class HPScript : Photon.MonoBehaviour
         currentHP -= damage;
         if (boost)
         {
-            currentHP += damage / 2;
+            float boostvalue = Mathf.Min(boostmax - boostnow, damage / 2);
+            currentHP += boostvalue;
+            boostnow += boostvalue;
+            GetComponent<MoveScript>().movespeed += boostvalue / 50;
         }
+    }
+
+    public void boostend()
+    {
+        boost = false;
+        GetComponent<MoveScript>().movespeed -= boostnow / 50;
+        boostnow = 0;
+    }
+
+    public void booststart()
+    {
+        boostend();
+        boost = true;
     }
 
     /*
