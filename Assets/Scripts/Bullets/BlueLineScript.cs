@@ -21,8 +21,11 @@ public class BlueLineScript : Photon.MonoBehaviour
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (timepsd >= maxtime || sender == null)
+	void Update ()
+    {
+        if (timepsd >= maxtime && Idrag)
+            gameObject.GetComponent<DestroyScript>().Destroyself();
+        if (sender == null)
             gameObject.GetComponent<DestroyScript>().Destroyself();
         if (Idrag && receiver == null)
             gameObject.GetComponent<DestroyScript>().Destroyself();
@@ -55,8 +58,10 @@ public class BlueLineScript : Photon.MonoBehaviour
             receiver.GetComponent<MoveScript>().cook += AddConstentCentrallyVelocity;
             maxtime = maxT;
             if (receiver.gameObject.GetPhotonView().isMine)
+            {
                 Idrag = true;
-            receiver.GetComponent<DoSkill>().ClearDebuff += gameObject.GetComponent<DestroyScript>().Destroyself;
+                receiver.GetComponent<DoSkill>().ClearDebuff += gameObject.GetComponent<DestroyScript>().Destroyself;
+            }
         }
         else
         {
@@ -71,7 +76,7 @@ public class BlueLineScript : Photon.MonoBehaviour
     {
         Vector2 distance = sender.position - victim.position;
         if (distance.sqrMagnitude > 1.1)
-            worker.VelotoAdd += (sender.position - victim.position).normalized * speed;
+            worker.VelotoAdd += distance.normalized * speed;
     }
 
     void OnDestroy()
