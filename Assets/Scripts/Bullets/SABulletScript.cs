@@ -28,7 +28,7 @@ public class SABulletScript : Photon.MonoBehaviour
         if (other.gameObject.GetComponent<DestroyScript>() != null && other.gameObject.GetComponent<DestroyScript>().breakable)
         {
             other.gameObject.GetComponent<DestroyScript>().Destroyself();
-            gameObject.GetComponent<DestroyScript>().Destroyself();
+            //gameObject.GetComponent<DestroyScript>().Destroyself();
             return;
         }
         if (other.gameObject == sender)
