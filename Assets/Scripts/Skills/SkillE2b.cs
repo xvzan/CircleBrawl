@@ -14,7 +14,7 @@ public class SkillE2b : Photon.MonoBehaviour
     private float currentcooldown;
     public float cooldowntime = 5;
     public bool skillavaliable;
-    bool working = false;
+    public bool working = false;
     float worktime;
     MoveScript MS;
 
@@ -58,8 +58,7 @@ public class SkillE2b : Photon.MonoBehaviour
 
     public void Skill()
     {
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         MS.controllable = true;
         currentcooldown = 0;
         skillavaliable = false;
@@ -82,7 +81,6 @@ public class SkillE2b : Photon.MonoBehaviour
             working = false;
         if (!working)
             return;
-        working = true;
         StartCoroutine(rework());
     }
 
@@ -101,7 +99,7 @@ public class SkillE2b : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    void lightninghit()
+    public void lightninghit()
     {
         working = false;
         GetComponent<ColliderScript>().StopKick();

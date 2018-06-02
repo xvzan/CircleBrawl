@@ -10383,7 +10383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655312788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13928,7 +13928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillD4
+  m_Text: Arc
 --- !u!222 &837098588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15087,7 +15087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Weaken
 --- !u!222 &906962205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21050,7 +21050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1226189195
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30469,7 +30469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1745878153
 RectTransform:
   m_ObjectHideFlags: 0

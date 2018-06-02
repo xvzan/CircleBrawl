@@ -42,8 +42,8 @@ public class LeechScript : Photon.MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (!PhotonNetwork.isMasterClient)
-            //return;
+        if (!photonView.isMine)
+            return;
         if (collision.gameObject == sender && gameObject.GetComponent<DestroyScript>().selfprotect)
             return;
         Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();

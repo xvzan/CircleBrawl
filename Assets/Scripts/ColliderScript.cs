@@ -13,16 +13,6 @@ public class ColliderScript : Photon.MonoBehaviour
     float currenttime;
     float maxtime = 1;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void FixedUpdate()
     {
         if (!CanDo)

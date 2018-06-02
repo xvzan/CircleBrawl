@@ -59,8 +59,7 @@ public class TestSkill02 : Photon.MonoBehaviour
             //gameObject.GetComponent<DoSkill>().Fire = null;
             Vector2 realplace = singplace + skilldirection.normalized * realdistance;
             Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
-            gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-            gameObject.GetComponent<StealthScript>().StealthEnd();
+            GetComponent<DoSkill>().BeforeSkill();
             //MS.controllable = true;
             currentcooldown = 0;
             skillavaliable = false;

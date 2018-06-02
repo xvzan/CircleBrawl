@@ -47,12 +47,10 @@ public class TestSkillLightning : Photon.MonoBehaviour
     public void Skill(Vector2 actionplace)
     {
         Vector2 realplace;
-        //DoSkill.singing = 0; //停止吟唱中技能
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
-        gameObject.GetComponent<DoSkill>().Fire = null;
+        //gameObject.GetComponent<DoSkill>().Fire = null;
         Rigidbody2D selfrb2d = gameObject.GetComponent<Rigidbody2D>();
         Vector2 skilldirection = actionplace - selfrb2d.position;
         RaycastHit2D hit2D = Physics2D.Raycast(selfrb2d.position + skilldirection.normalized * SelfR, skilldirection - skilldirection.normalized * SelfR);

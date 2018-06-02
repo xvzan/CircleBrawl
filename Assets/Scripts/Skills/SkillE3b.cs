@@ -48,8 +48,7 @@ public class SkillE3b : Photon.MonoBehaviour
 
     public void Skill(Vector2 actionplace)
     {
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
         float realdistance = Mathf.Min(skilldirection.magnitude, maxdistance);

@@ -50,8 +50,7 @@ public class SkillE2 : Photon.MonoBehaviour
 
     public void Skill()
     {
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         MS.controllable = true;
         currentcooldown = 0;
         skillavaliable = false;

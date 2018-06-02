@@ -59,8 +59,7 @@ public class SkillY2b : Photon.MonoBehaviour
         {
             return;
         }   //半径小于自身半径时不施法
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
         Vector2 Suiteplace = singplace - skilldirection.normalized * 2;

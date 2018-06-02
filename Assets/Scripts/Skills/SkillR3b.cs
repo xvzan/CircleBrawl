@@ -48,9 +48,7 @@ public class SkillR3b : Photon.MonoBehaviour
     public void Skill(Vector2 actionplace)
     {
         Vector2 realplace;
-        //DoSkill.singing = 0; //停止吟唱中技能
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
         gameObject.GetComponent<DoSkill>().Fire = null;

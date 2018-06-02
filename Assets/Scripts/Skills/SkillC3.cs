@@ -61,7 +61,7 @@ public class SkillC3 : Photon.MonoBehaviour
     void Skill()
     {
         //shadowtime = 0;
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        GetComponent<DoSkill>().BeforeSkill();
         MyShadow = Instantiate(ShadowCircle, transform.position, Quaternion.identity);
         canctrl = gameObject.GetComponent<MoveScript>().controllable;
         if (!canctrl)

@@ -72,8 +72,7 @@ public class SkillR1b : Photon.MonoBehaviour
         else
         {
             Vector2 realplace = singplace + skilldirection.normalized * realdistance;
-            gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-            gameObject.GetComponent<StealthScript>().StealthEnd();
+            GetComponent<DoSkill>().BeforeSkill();
             gameObject.GetComponent<MoveScript>().controllable = true;
             currentcooldown = 0;
             skillavaliable = false;

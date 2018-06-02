@@ -56,8 +56,7 @@ public class SkillD4 : Photon.MonoBehaviour
         {
             return;
         }   //半径小于自身半径时不施法
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
         bulletspeed = realdistance * 1.13f / (maxtime - 0.5f);

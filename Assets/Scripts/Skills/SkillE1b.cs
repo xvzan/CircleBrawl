@@ -48,10 +48,7 @@ public class SkillE1b : Photon.MonoBehaviour
 
     public void Skill(Vector2 actionplace)
     {
-        //DoSkill.singing = 0;
-        //gameObject.GetComponent<DoSkill>().Fire = null;
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         Vector2 singplace = transform.position;
         Vector2 skilldirection = actionplace - singplace;
         DoFire(singplace + 1.01f * skilldirection.normalized, skilldirection.normalized * bulletspeed);

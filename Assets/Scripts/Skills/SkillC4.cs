@@ -64,6 +64,7 @@ public class SkillC4 : Photon.MonoBehaviour
         faking = false;
         Vector2 Realv2 = (Worldv2 - selfRB.position).normalized * 2;
         Vector2 center = selfRB.position;
+        gameObject.GetComponent<DoSkill>().DoClearJob();
         selfRB.position += Realv2;
         for (int i = 0; i < 2; i++)
         {
@@ -77,8 +78,7 @@ public class SkillC4 : Photon.MonoBehaviour
 
     void Skill()
     {
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
         currentfaketime = 0;

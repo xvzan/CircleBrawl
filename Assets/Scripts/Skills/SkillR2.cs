@@ -59,8 +59,7 @@ public class SkillR2 : Photon.MonoBehaviour
         }   //半径小于自身半径时不施法
         else
         {
-            gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-            gameObject.GetComponent<StealthScript>().StealthEnd();
+            GetComponent<DoSkill>().BeforeSkill();
             MS.controllable = true;
             currentcooldown = 0;
             skillavaliable = false;

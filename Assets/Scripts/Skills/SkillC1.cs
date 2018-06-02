@@ -45,8 +45,7 @@ public class SkillC1 : Photon.MonoBehaviour
 
     void Skill()
     {
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         currentcooldown = 0;
         skillavaliable = false;
         MyBoostObj.GetComponent<BoostScript>().sender = gameObject;

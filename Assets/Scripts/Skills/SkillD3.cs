@@ -47,10 +47,7 @@ public class SkillD3 : Photon.MonoBehaviour
 
     public void Skill(Vector2 actionplace)
     {
-        //DoSkill.singing = 0;
-        //gameObject.GetComponent<DoSkill>().Fire = null;
-        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
-        gameObject.GetComponent<StealthScript>().StealthEnd();
+        GetComponent<DoSkill>().BeforeSkill();
         GameObject SkillTarget = FindClosestEnemy(actionplace);
         if (SkillTarget != null)
             actionplace = SkillTarget.transform.position;

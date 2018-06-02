@@ -214,7 +214,7 @@ MonoBehaviour:
   MyLineObj: {fileID: 1056130122229082, guid: e5087dcb1240e2744bd1a07675e13a4b, type: 2}
   MyLine: {fileID: 0}
   maxdistance: 10
-  cooldowntime: 6
+  cooldowntime: 10
   skillavaliable: 1
   speed: 3
   damage: 2
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   Faker: {fileID: 1864864053176770, guid: e75a113ff287dee4daf832df4ae7375f, type: 2}
-  cooldowntime: 5
+  cooldowntime: 10
   skillavaliable: 1
   maxfaketime: 3
   selfRB: {fileID: 50066458329441964}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 6
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
   SelfR: 0.51
 --- !u!114 &114215185059955342
@@ -298,8 +298,8 @@ MonoBehaviour:
   fireball: {fileID: 1197206318659480, guid: 12e895a9027336d4aadf9e33e68f976a, type: 2}
   force: 1500
   damage: 10
-  cooldowntime: 3
-  skillavaliable: 0
+  cooldowntime: 10
+  skillavaliable: 1
 --- !u!114 &114281299735048176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,8 +315,8 @@ MonoBehaviour:
   TheRock: {fileID: 1226264735029378, guid: 49d3fa88c96ba09488526e24f62c6ca3, type: 2}
   maxdistance: 5
   damage: 10
-  bombforce: 18
-  cooldowntime: 3
+  bombforce: 12
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114285432174419920
 MonoBehaviour:
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
   SelfR: 0.51
   line: {fileID: 120936783767746970}
@@ -427,7 +427,7 @@ MonoBehaviour:
   maxdistance: 0
   bulletspeed: 3
   fireball: {fileID: 1759941245943736, guid: a31d7819e27549441b45811423792197, type: 2}
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114360562090905442
 MonoBehaviour:
@@ -476,7 +476,7 @@ MonoBehaviour:
   bulletamount: 7
   force: 0
   damage: 0
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 0
 --- !u!114 &114424470271117496
 MonoBehaviour:
@@ -493,7 +493,7 @@ MonoBehaviour:
   MyLineObj: {fileID: 1670538693123850, guid: 45287d47dc27deb41a477c63f62b5c19, type: 2}
   MyLine: {fileID: 0}
   maxdistance: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
   speed: 3
   damage: 3
@@ -531,7 +531,7 @@ MonoBehaviour:
   MyShieldObj: {fileID: 1436927845370548, guid: b909350574ba82846a897b9f716219bf,
     type: 2}
   MyShield: {fileID: 0}
-  cooldowntime: 6
+  cooldowntime: 10
   skillavaliable: 1
   maxtime: 2
 --- !u!114 &114453176934573388
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 5
-  cooldowntime: 6
+  cooldowntime: 10
   skillavaliable: 1
   scdtime: 2
 --- !u!114 &114540715471846792
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114546328487003428
 MonoBehaviour:
@@ -601,9 +601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
-  cooldowntime: 5
+  cooldowntime: 10
   skillavaliable: 1
-  LDspeed: 15
+  LDspeed: 8
 --- !u!114 &114576861000568682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -620,7 +620,7 @@ MonoBehaviour:
   bulletspeed: 5
   leecher: {fileID: 1068041348700320, guid: 38d5b90ee1fae584ea23520643191810, type: 2}
   damage: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 0
 --- !u!114 &114616891319659198
 MonoBehaviour:
@@ -640,7 +640,7 @@ MonoBehaviour:
   bulletamount: 4
   force: 0
   damage: 0
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114617714187311878
 MonoBehaviour:
@@ -686,7 +686,7 @@ MonoBehaviour:
   bulletspeed: 5
   Missile: {fileID: 1453930264023322, guid: 2eb9a597cdd746349af1d04f2180eb89, type: 2}
   damage: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114652884969489252
 MonoBehaviour:
@@ -716,7 +716,7 @@ MonoBehaviour:
   pushPower: 10
   pushTime: 1
   pushDamage: 7
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114672273343103500
 MonoBehaviour:
@@ -745,7 +745,7 @@ MonoBehaviour:
   bulletspeed: 10
   DisBall: {fileID: 1243331948380450, guid: 65bbd73cc94e439438cb6d5685e90fc8, type: 2}
   DisTime: 2
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114680706587732544
 MonoBehaviour:
@@ -763,7 +763,7 @@ MonoBehaviour:
   pushPower: 10
   pushTime: 0.5
   pushDamage: 3
-  cooldowntime: 7
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114686709083244286
 MonoBehaviour:
@@ -792,7 +792,7 @@ MonoBehaviour:
   bulletspeed: 15
   fireball: {fileID: 1993394550826064, guid: 8d125a1f4007d08468bfc73877b274eb, type: 2}
   damage: 5
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114697688607761396
 MonoBehaviour:
@@ -808,7 +808,7 @@ MonoBehaviour:
   MyImageScript: {fileID: 0}
   MySuiteObj: {fileID: 1758492616619336, guid: 3a4f648ffaa050d4f9987fa2068f0aaa, type: 2}
   maxdistance: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114700218454386028
 MonoBehaviour:
@@ -828,7 +828,7 @@ MonoBehaviour:
   fireball: {fileID: 1879315621552482, guid: 58a4173f929980146aa16d6b42fc43e3, type: 2}
   force: 15
   damage: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114709579917456588
 MonoBehaviour:
@@ -848,6 +848,7 @@ MonoBehaviour:
   pushDamage: 2
   cooldowntime: 10
   skillavaliable: 1
+  working: 0
 --- !u!114 &114719163519757270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -862,7 +863,7 @@ MonoBehaviour:
   MyImageScript: {fileID: 0}
   ShadowCircle: {fileID: 1385352283329590, guid: 61523dfce7a1d1f41b9ff979b2a36971,
     type: 2}
-  cooldowntime: 3
+  cooldowntime: 10
   maxshadowtime: 2.5
   skillavaliable: 1
 --- !u!114 &114730773768782418
@@ -880,7 +881,7 @@ MonoBehaviour:
   bulletspeed: 25
   fireball: {fileID: 1376816417721550, guid: 950a43953b164644cb5009041975b748, type: 2}
   damage: 5
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 0
 --- !u!114 &114750286348339094
 MonoBehaviour:
@@ -898,7 +899,7 @@ MonoBehaviour:
   maxtime: 2
   ST: {fileID: 1841121462876242, guid: f87d6d32eb970454faa6d3424ca644ed, type: 2}
   damage: 3
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114773886250041742
 MonoBehaviour:
@@ -916,7 +917,7 @@ MonoBehaviour:
   fireball: {fileID: 1800137180570752, guid: 4aef57d96347bba4a88e627dce0b8359, type: 2}
   force: 15
   damage: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114842419683896440
 MonoBehaviour:
@@ -942,7 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 10
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114910228132107832
 MonoBehaviour:
@@ -981,7 +982,7 @@ MonoBehaviour:
   maxtime: 3
   SA: {fileID: 1796281269702032, guid: 2a7c97ed457ecb245a49ebbf0413c90e, type: 2}
   damage: 3
-  cooldowntime: 3
+  cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114985266391881892
 MonoBehaviour:

@@ -62,4 +62,11 @@ public class DoSkill : Photon.MonoBehaviour
         WorkBeforeDestroy();
         WorkBeforeDestroy = null;
     }
+
+    public void BeforeSkill()
+    {
+        gameObject.GetComponent<MoveScript>().stopwalking(); //停止走动
+        gameObject.GetComponent<StealthScript>().StealthEnd();
+        gameObject.GetComponent<SkillE2b>().lightninghit();
+    }
 }
