@@ -47,7 +47,7 @@ public class MoveScript : Photon.MonoBehaviour {
             {
                 GameObject.Destroy(targeticon);
             }
-            selfvelocity = movedirection.normalized * movespeed;
+            selfvelocity = movedirection.normalized * (movespeed + StealthScript.Speed);
         }
         else
         {

@@ -72,6 +72,7 @@ public class SkillE2b : Photon.MonoBehaviour
         gameObject.GetComponent<ColliderScript>().SetPower(pushPower, pushTime, pushDamage);
         gameObject.GetComponent<ColliderScript>().StartKick(maxTimeE2);
         gameObject.GetComponent<StealthScript>().StealthByTime(maxTimeE2, false);
+        StealthScript.Speed = 1;
         worktime = 0;
     }
 

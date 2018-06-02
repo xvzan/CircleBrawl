@@ -14,6 +14,7 @@ public class StealthScript : Photon.MonoBehaviour
     public Color ColorChangeTo;
     float currenttime;
     float maxtime = 1;
+    public static float Speed = 0;
     bool WindWalkByTime = false;
     bool UCME = false;
 
@@ -92,6 +93,7 @@ public class StealthScript : Photon.MonoBehaviour
         WindWalkByTime = false;
         GetComponent<ColliderScript>().DSWLatAll();
         photonView.RPC("Appear", PhotonTargets.All);
+        Speed = 0;
         UCME = false;
     }
 }

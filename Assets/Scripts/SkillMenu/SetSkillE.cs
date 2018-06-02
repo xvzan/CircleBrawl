@@ -90,5 +90,6 @@ public class SetSkillE : Photon.MonoBehaviour
         Soldier.GetComponent<SkillE3>().MyImageScript = null;
         Soldier.GetComponent<SkillE3b>().enabled = false;
         Soldier.GetComponent<SkillE3b>().MyImageScript = null;
+        Soldier.GetComponent<StealthScript>().StealthEnd();
     }
 }

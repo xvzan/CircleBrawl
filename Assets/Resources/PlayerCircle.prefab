@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 114360562090905442}
   - component: {fileID: 114448691188997236}
   - component: {fileID: 114719163519757270}
+  - component: {fileID: 114191731523452440}
   - component: {fileID: 114312116052051252}
   - component: {fileID: 114773886250041742}
   - component: {fileID: 114618554307119934}
@@ -217,6 +218,23 @@ MonoBehaviour:
   speed: 3
   damage: 2
   maxtime: 5
+--- !u!114 &114191731523452440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce8b2b8e3a20064ba4aaffae4aa8482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  Faker: {fileID: 1864864053176770, guid: e75a113ff287dee4daf832df4ae7375f, type: 2}
+  cooldowntime: 5
+  skillavaliable: 1
+  maxfaketime: 3
+  selfRB: {fileID: 50066458329441964}
 --- !u!114 &114195414578748798
 MonoBehaviour:
   m_ObjectHideFlags: 1

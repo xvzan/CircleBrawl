@@ -45,6 +45,8 @@ public class HPScript : Photon.MonoBehaviour
 
     private void OnDestroy()
     {
+        if (!gameObject.CompareTag("Player"))
+            return;
         GameObject[] PlayersLeft = GameObject.FindGameObjectsWithTag("Player");
         if (PhotonNetwork.isMasterClient && PlayersLeft.Length <= 1)
         {
