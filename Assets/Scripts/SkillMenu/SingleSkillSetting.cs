@@ -26,6 +26,7 @@ public class SingleSkillSetting : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        TopLevel = 1;//Under Construction
         UpdatePrice();
     }
 	

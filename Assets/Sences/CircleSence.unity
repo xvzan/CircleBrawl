@@ -2543,7 +2543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SkillC4
+  m_Text: Mirror
 --- !u!222 &167709618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2813,7 +2813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Relocate
 --- !u!222 &196002621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5925,7 +5925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &357069881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14002,7 +14002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mode2
+  m_Text: Induction
 --- !u!222 &838998889
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15180,7 +15180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &912207626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16559,7 +16559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &992655862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21804,7 +21804,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1244102738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26367,7 +26367,6 @@ MonoBehaviour:
   D2: {fileID: 78901947}
   D3: {fileID: 727648731}
   D4: {fileID: 707617652}
-  D5: {fileID: 1244102740}
   IconD: {fileID: 916490166}
 --- !u!114 &1481734814
 MonoBehaviour:
@@ -35441,7 +35440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2059999657
 RectTransform:
   m_ObjectHideFlags: 0

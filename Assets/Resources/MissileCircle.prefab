@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114984421665132428}
   - component: {fileID: 114153569713998482}
   - component: {fileID: 114242930180966002}
+  - component: {fileID: 114224895289820658}
   m_Layer: 0
   m_Name: MissileCircle
   m_TagString: Untagged
@@ -95,6 +96,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakable: 1
+  selfprotect: 1
+--- !u!114 &114224895289820658
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453930264023322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114242930180966002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,9 +133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxtime: 3
+  pushtime: 1
   bombpower: 7
   bombdamage: 10
   sender: {fileID: 0}
+  selfbreak: 1
 --- !u!114 &114596088752526960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,30 +161,42 @@ MonoBehaviour:
     InterpolateSpeedCurve:
       serializedVersion: 2
       m_Curve:
-      - serializedVersion: 2
+      - serializedVersion: 3
         time: -1
         value: 0
         inSlope: 0
         outSlope: Infinity
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 0
         value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 1
         value: 1
         inSlope: 0
         outSlope: 1
         tangentMode: 0
-      - serializedVersion: 2
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 4
         value: 4
         inSlope: 1
         outSlope: 0
         tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -241,6 +268,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114829228075819282}
   - component: {fileID: 114832610306036788}
   - component: {fileID: 114504136527300214}
+  - component: {fileID: 114286488155337162}
   m_Layer: 0
   m_Name: DisCircle
   m_TagString: bullet
@@ -82,6 +83,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114286488155337162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243331948380450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114504136527300214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breakable: 1
+  selfprotect: 1
 --- !u!114 &114768757280160398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,6 +123,7 @@ MonoBehaviour:
   bombpower: 0
   bombdamage: 0
   sender: {fileID: 0}
+  selfbreak: 1
 --- !u!114 &114829228075819282
 MonoBehaviour:
   m_ObjectHideFlags: 1

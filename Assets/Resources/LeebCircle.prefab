@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114572175470026830}
   - component: {fileID: 114813433460431156}
   - component: {fileID: 114903935269588230}
+  - component: {fileID: 114996717275434502}
   m_Layer: 0
   m_Name: LeebCircle
   m_TagString: Untagged
@@ -228,6 +229,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114996717275434502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993394550826064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212111026925700680
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114388491563942368}
   - component: {fileID: 114496753796720602}
   - component: {fileID: 114733828401087214}
+  - component: {fileID: 114153016339206810}
   m_Layer: 0
   m_Name: BoomerangCircle
   m_TagString: bullet
@@ -110,6 +111,17 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114153016339206810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800137180570752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114388491563942368
 MonoBehaviour:
   m_ObjectHideFlags: 1

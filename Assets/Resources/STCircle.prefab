@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114437146508067676}
   - component: {fileID: 114869750749954844}
   - component: {fileID: 114877155994244098}
+  - component: {fileID: 114479292829517590}
   m_Layer: 0
   m_Name: STCircle
   m_TagString: bullet
@@ -95,6 +96,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114479292829517590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841121462876242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114869750749954844
 MonoBehaviour:
   m_ObjectHideFlags: 1

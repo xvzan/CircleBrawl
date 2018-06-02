@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114189054383329230}
   - component: {fileID: 114568453752928766}
   - component: {fileID: 114387287402674440}
+  - component: {fileID: 114189983246081280}
   m_Layer: 0
   m_Name: BananaCircle
   m_TagString: bullet
@@ -95,6 +96,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizeVelocity: 1
   m_SynchronizeAngularVelocity: 0
+--- !u!114 &114189983246081280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879315621552482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39265c83c53004949b034f6ed296c358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114323764838034774
 MonoBehaviour:
   m_ObjectHideFlags: 1

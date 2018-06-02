@@ -11,7 +11,7 @@ public class SetSkillD : Photon.MonoBehaviour
     public Toggle D2;
     public Toggle D3;
     public Toggle D4;
-    public Toggle D5;
+    //public Toggle D5;
     public Image IconD;
     GameObject Soldier;
 
