@@ -18,6 +18,8 @@ public class CentrallyConstentField : Photon.MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (photonView.isMine)
+            return;
         MoveScript MS = collision.GetComponent<MoveScript>();
         MS.cook += AddConstentCentrallyVelocity;
     }

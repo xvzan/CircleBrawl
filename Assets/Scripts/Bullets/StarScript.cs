@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon;
 
-public class RollScript : Photon.MonoBehaviour
+public class StarScript : Photon.MonoBehaviour
 {
-    public Vector2 v;
-    public Rigidbody2D selfRB;
-    public float rolldamage = 2;
+    public float powerpers = 2;
 
     private void FixedUpdate()
     {
         if (!photonView.isMine)
             return;
-        selfRB.velocity = v;
-        rollSkill();
+        perSkill();
     }
-    
-    public void rollSkill()
+
+    public void perSkill()
     {
         float radius = transform.lossyScale.x / 2;
         Vector2 actionplace = transform.position;
@@ -27,7 +24,10 @@ public class RollScript : Photon.MonoBehaviour
             HPScript hp = hit.GetComponent<HPScript>();
             if (hp != null)
             {
-                hp.GetHurt(rolldamage * Time.fixedDeltaTime);
+                if (hp.gameObject.GetPhotonView().isMine)
+                    hp.GetHurt(-powerpers * Time.fixedDeltaTime);
+                else
+                    hp.GetHurt(powerpers * Time.fixedDeltaTime);
             }
         }
     }

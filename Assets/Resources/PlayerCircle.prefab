@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 114424470271117496}
   - component: {fileID: 114680647777075134}
   - component: {fileID: 114697688607761396}
+  - component: {fileID: 114089476444545356}
+  - component: {fileID: 114544641277982592}
   - component: {fileID: 114985266391881892}
   m_Layer: 0
   m_Name: PlayerCircle
@@ -199,6 +201,24 @@ MonoBehaviour:
   MyHealthbar: {fileID: 1803222928252818}
   BigSR: {fileID: 212906178296044240}
   ColorChangeTo: {r: 0, g: 0, b: 1, a: 0.49803922}
+--- !u!114 &114089476444545356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a75bbd6244d1154195b82aef16e443b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  maxtime: 4
+  bulletspeed: 4
+  fireball: {fileID: 1498595659494272, guid: 13625c3f8163106408cc4d873de5bcbb, type: 2}
+  force: 1.5
+  cooldowntime: 10
+  skillavaliable: 1
 --- !u!114 &114191253232522832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,6 +607,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MyImageScript: {fileID: 0}
   maxdistance: 10
+  cooldowntime: 10
+  skillavaliable: 1
+--- !u!114 &114544641277982592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc95933ba9eb5a4a9d552573e963ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyImageScript: {fileID: 0}
+  TheStar: {fileID: 1698348655819118, guid: 88099a9c7d063964ab84211ac7554f21, type: 2}
+  maxdistance: 6
+  powerpersecond: 2
+  maxtime: 4
   cooldowntime: 10
   skillavaliable: 1
 --- !u!114 &114546328487003428
