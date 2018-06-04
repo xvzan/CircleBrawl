@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4918624476665090}
   - component: {fileID: 212203731761328744}
   - component: {fileID: 114987888410563062}
-  - component: {fileID: 58859051039906650}
   - component: {fileID: 50991616634449884}
   - component: {fileID: 114108038762558830}
   - component: {fileID: 114270773162847216}
@@ -68,21 +67,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58859051039906650
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1698348655819118}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &114082899562591314
 MonoBehaviour:
   m_ObjectHideFlags: 1
