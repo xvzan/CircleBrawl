@@ -32,6 +32,7 @@ public class TestMenu02 : Photon.PunBehaviour
     
     private void OnEnable()
     {
+        hidepanel();
         if (PhotonNetwork.inRoom)
         {
             setreadystatusonline();
@@ -77,6 +78,14 @@ public class TestMenu02 : Photon.PunBehaviour
         Masterpanel.SetActive(false);
         Otherpanel.SetActive(true);
         isready = Readytoggle.isOn;
+        setreadystatusonline();
+    }
+
+    public void hidepanel()
+    {
+        Otherpanel.SetActive(false);
+        Masterpanel.SetActive(false);
+        isready = false;
         setreadystatusonline();
     }
 
