@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 114115049980953978}
   - component: {fileID: 114277715544299270}
   - component: {fileID: 114368622091724132}
+  - component: {fileID: 114432962354205290}
   m_Layer: 0
   m_Name: FakeCircle
   m_TagString: Untagged
@@ -328,6 +329,18 @@ MonoBehaviour:
   Beauty: {fileID: 0}
   selfRB: {fileID: 50260735576506798}
   maxtime: 3
+--- !u!114 &114432962354205290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864864053176770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1278fb652d220c40aa7d93328e0413f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myname: 
 --- !u!114 &114562115357910408
 MonoBehaviour:
   m_ObjectHideFlags: 1

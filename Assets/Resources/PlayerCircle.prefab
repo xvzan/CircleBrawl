@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 114271971038828940}
   - component: {fileID: 114672273343103500}
   - component: {fileID: 114686709083244286}
+  - component: {fileID: 114925155976925702}
   - component: {fileID: 114617714187311878}
   - component: {fileID: 114285432174419920}
   - component: {fileID: 120936783767746970}
@@ -1004,6 +1005,18 @@ MonoBehaviour:
   selfvelocity: {x: 0, y: 0}
   PlayerRb2d: {fileID: 50066458329441964}
   targeticon: {fileID: 0}
+--- !u!114 &114925155976925702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808039536022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1278fb652d220c40aa7d93328e0413f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myname: 
 --- !u!114 &114957782291696940
 MonoBehaviour:
   m_ObjectHideFlags: 1
