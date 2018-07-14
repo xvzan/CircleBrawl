@@ -43,7 +43,12 @@ public class TestMenu01 : Photon.PunBehaviour
             roomMessage[i].SetActive(false);            //禁用房间信息条目
         }
     }
-    
+
+    private void OnDisable()
+    {
+        JoinOrCreateButton.SetActive(false);
+    }
+
     /**覆写IPunCallback回调函数，当房间列表更新时调用
 	 * 更新游戏大厅中房间列表的显示
 	 */
