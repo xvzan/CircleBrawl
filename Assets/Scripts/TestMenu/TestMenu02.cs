@@ -107,8 +107,8 @@ public class TestMenu02 : Photon.PunBehaviour
     public void ClickStartButton()
     {
         PhotonNetwork.room.IsOpen = false;
-        EnterCircleSence();
-        //photonView.RPC("EnterCircleSence", PhotonTargets.All);
+        EnterCircleScene();
+        //photonView.RPC("EnterCircleScene", PhotonTargets.All);
     }
 
     public void ClickBackButton()
@@ -125,10 +125,10 @@ public class TestMenu02 : Photon.PunBehaviour
             showotherpanel();
     }
 
-    [PunRPC]
-    public void EnterCircleSence()
+    //[PunRPC]
+    public void EnterCircleScene()
     {
-        PhotonNetwork.LoadLevel("Sences/CircleSence");
+        PhotonNetwork.LoadLevel("Scenes/CircleScene");
     }
 
     [PunRPC]

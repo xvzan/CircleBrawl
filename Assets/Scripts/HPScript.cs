@@ -50,7 +50,7 @@ public class HPScript : Photon.MonoBehaviour
         GameObject[] PlayersLeft = GameObject.FindGameObjectsWithTag("Player");
         if (PhotonNetwork.isMasterClient && PlayersLeft.Length <= 1)
         {
-            PhotonNetwork.LoadLevel("Sences/TestMenu");
+            PhotonNetwork.LoadLevel("Scenes/TestMenu");
         }
     }
 
