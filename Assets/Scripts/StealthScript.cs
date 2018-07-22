@@ -43,6 +43,7 @@ public class StealthScript : Photon.MonoBehaviour
             BigSR.enabled = false;
             SmallSR.enabled = false;
             BarSR.enabled = false;
+            GetComponent<ShowMyName>().enabled = false;
         }
     }
 
@@ -56,6 +57,7 @@ public class StealthScript : Photon.MonoBehaviour
             BigSR.enabled = true;
             SmallSR.enabled = true;
             BarSR.enabled = true;
+            GetComponent<ShowMyName>().enabled = true;
         }
     }
 

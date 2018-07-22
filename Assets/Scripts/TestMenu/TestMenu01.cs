@@ -6,6 +6,7 @@ using Photon;
 
 public class TestMenu01 : Photon.PunBehaviour
 {
+    public Text WelcomeMessage;
     public Button backButton;               //返回按钮
     public GameObject roomMessagePanel;     //房间信息面板
     public GameObject previousButton;       //"上一页"按钮
@@ -30,6 +31,7 @@ public class TestMenu01 : Photon.PunBehaviour
     {
         currentPageNumber = 1;              //初始化当前房间页
         maxPageNumber = 1;                  //初始化最大房间页	
+        WelcomeMessage.text = "Welcome," + PhotonNetwork.player.NickName;
 
         //获取房间信息面板
         RectTransform rectTransform = roomMessagePanel.GetComponent<RectTransform>();
@@ -42,6 +44,7 @@ public class TestMenu01 : Photon.PunBehaviour
             roomMessage[i] = rectTransform.GetChild(i).gameObject;
             roomMessage[i].SetActive(false);            //禁用房间信息条目
         }
+        ButtonControl();
     }
 
     private void OnDisable()
@@ -107,7 +110,8 @@ public class TestMenu01 : Photon.PunBehaviour
     //翻页按钮控制函数
     void ButtonControl()
     {
-        JoinOrCreateButton.SetActive(true);
+        if (!JoinOrCreateButton.activeInHierarchy && PhotonNetwork.GetRoomList().Length >= 0)
+            JoinOrCreateButton.SetActive(true);
         //如果当前页为1，禁用"上一页"按钮；否则，启用"上一页"按钮
         if (currentPageNumber == 1)
             previousButton.SetActive(false);
