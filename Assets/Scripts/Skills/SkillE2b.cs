@@ -101,7 +101,9 @@ public class SkillE2b : Photon.MonoBehaviour
     [PunRPC]
     public void lightninghit()
     {
-        working = false;
+        if (!working)
+            return;
         GetComponent<ColliderScript>().StopKick();
+        working = false;
     }
 }
