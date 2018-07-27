@@ -28,7 +28,7 @@ public class TestMenu00 : Photon.PunBehaviour
         PhotonNetwork.AuthValues.AuthType = CustomAuthenticationType.Steam;
         string SteamAuthSessionTicket = GetSteamAuthTicket(out hAuthTicket);
         PhotonNetwork.AuthValues.AddAuthParameter("ticket", SteamAuthSessionTicket);
-        PhotonNetwork.ConnectUsingSettings("0.1.3s.1");
+        PhotonNetwork.ConnectUsingSettings("0.1.4s.0p");
     }
 
     public void ClickJoinLobbyButton()
