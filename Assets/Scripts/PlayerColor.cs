@@ -13,6 +13,7 @@ public class PlayerColor : Photon.MonoBehaviour
     void Start () {
         a = PhotonNetwork.playerList.Length;
         b = photonView.ownerId;
-        ColorMark.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(a / b, 1, 1);
+        float h = (float)b / a;
+        ColorMark.GetComponent<SpriteRenderer>().color = Color.HSVToRGB(h, 1, 1);
 	}
 }

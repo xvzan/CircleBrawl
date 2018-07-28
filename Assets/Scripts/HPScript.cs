@@ -24,7 +24,7 @@ public class HPScript : Photon.MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.magnitude > safeground.transform.lossyScale.x / 2 && photonView.isMine)
+        if (photonView.isMine && transform.position.magnitude > safeground.transform.lossyScale.x / 2)
         {
             currentHP -= outhurt * Time.fixedDeltaTime;
         }
