@@ -12,7 +12,7 @@ public class StealthScript : Photon.MonoBehaviour
     SpriteRenderer SmallSR;
     SpriteRenderer BarSR;
     SpriteRenderer ColorSR;
-    ShowMyName MyName;
+    public GameObject MyName;
     Color ColorBefore;
     public Color ColorChangeTo;
     float currenttime;
@@ -26,7 +26,7 @@ public class StealthScript : Photon.MonoBehaviour
         SmallSR = MyMarkicon.GetComponent<SpriteRenderer>();
         BarSR = MyHealthbar.GetComponent<SpriteRenderer>();
         ColorSR = MyColorMark.GetComponent<SpriteRenderer>();
-        MyName = GetComponent<ShowMyName>();
+        //MyName = GetComponent<ShowMyName>();
     }
 
     void FixedUpdate()
@@ -49,7 +49,7 @@ public class StealthScript : Photon.MonoBehaviour
             SmallSR.enabled = false;
             BarSR.enabled = false;
             ColorSR.enabled = false;
-            MyName.enabled = false;
+            MyName.SetActive(false);
         }
     }
 
@@ -64,7 +64,7 @@ public class StealthScript : Photon.MonoBehaviour
             SmallSR.enabled = true;
             BarSR.enabled = true;
             ColorSR.enabled = true;
-            MyName.enabled = true;
+            MyName.SetActive(true);
         }
     }
 

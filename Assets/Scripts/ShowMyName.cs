@@ -1,21 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon;
 
 public class ShowMyName : Photon.MonoBehaviour
 {
-    public string myname;
+    public GameObject MyNameText;
+    GameObject MyName;
 
     // Use this for initialization
     void Start () {
-        myname = photonView.owner.NickName;
+        Canvas TheCanvas = GameObject.FindObjectOfType<Canvas>();
+        MyName = GameObject.Instantiate(MyNameText, TheCanvas.gameObject.transform);
+        MyName.GetComponent<Text>().text = photonView.owner.NickName;
+        GetComponent<StealthScript>().MyName = MyName;
     }
 
-    private void OnGUI()
+    private void Update()
     {
-        Vector2 namepos = Camera.main.WorldToScreenPoint(transform.position + Vector3.down * 0.6f);
-        Vector2 nameSize = GUI.skin.label.CalcSize(new GUIContent(myname));
-        GUI.Label(new Rect(namepos.x - (nameSize.x / 2), Screen.height - namepos.y, nameSize.x, nameSize.y), myname);
+        MyName.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.down * 0.8f);
     }
 }

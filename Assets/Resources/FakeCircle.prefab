@@ -386,6 +386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myname: 
+  MyNameText: {fileID: 1005682621337788, guid: 57bd333a77e84244fa9415784b9c0653, type: 2}
+  MyName: {fileID: 0}
+  TheCanvas: {fileID: 0}
 --- !u!114 &114562115357910408
 MonoBehaviour:
   m_ObjectHideFlags: 1
