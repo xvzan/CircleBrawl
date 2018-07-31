@@ -21,4 +21,9 @@ public class ShowMyName : Photon.MonoBehaviour
     {
         MyName.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.down * 0.8f);
     }
+
+    private void OnDestroy()
+    {
+        Destroy(MyName);
+    }
 }
