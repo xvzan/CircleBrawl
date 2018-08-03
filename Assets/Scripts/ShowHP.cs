@@ -25,7 +25,7 @@ public class ShowHP : Photon.MonoBehaviour
     {
         MyHP.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 0.7f);
         MyHP.GetComponent<Slider>().value = gameObject.GetComponent<HPScript>().currentHP / gameObject.GetComponent<HPScript>().maxHP;
-        MyHPText.text = Mathf.Round(gameObject.GetComponent<HPScript>().currentHP) + "/" + gameObject.GetComponent<HPScript>().maxHP;
+        MyHPText.text = Mathf.Round(gameObject.GetComponent<HPScript>().currentHP * 10) / 10 + "/" + gameObject.GetComponent<HPScript>().maxHP;
     }
 
     private void OnDestroy()

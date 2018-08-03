@@ -107,4 +107,14 @@ public class StealthScript : Photon.MonoBehaviour
         Speed = 0;
         UCME = false;
     }
+
+    private void OnMouseEnter()
+    {
+        SmallSR.color = Color.black;
+    }
+
+    private void OnMouseExit()
+    {
+        SmallSR.color = Color.white;
+    }
 }

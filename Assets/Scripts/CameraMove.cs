@@ -54,5 +54,7 @@ public class CameraMove : MonoBehaviour
         {
             transform.position = oriplace;
         }
+        if (Camera.main.orthographicSize < 1)
+            Camera.main.orthographicSize = 1;
     }
 }
